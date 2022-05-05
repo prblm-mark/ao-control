@@ -17,13 +17,17 @@
 <script>
 import IconDark from '../icons/IconDark.vue'
 import IconLight from '../icons/IconLight.vue'
+import { useModeStore } from '@/store/ModeStore'
 
 export default {
     components: { IconDark, IconLight },
 
     setup() {
+        const ModeStore = useModeStore()
+
         const toggleTheme = () => {
             document.documentElement.classList.toggle('dark')
+            ModeStore.darkMode = !ModeStore.darkMode
         }
 
         return { toggleTheme }

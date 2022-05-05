@@ -39,7 +39,7 @@ export default {
 
 <style scoped>
 .swatch-colour {
-    @apply grid items-center justify-center h-14 rounded-md mb-2 text-xs font-bold text-white tracking-wider;
+    @apply grid items-center justify-center h-14 rounded-md mb-2 text-xs font-bold text-white tracking-wider border border-white border-opacity-10;
 }
 .swatch-reference {
     @apply text-ao-mid-blue-500 dark:text-slate-400 text-xs tracking-wider xl:mb-6 font-semibold;

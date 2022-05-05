@@ -20,7 +20,7 @@ export default {
 
 <style scoped>
 header {
-    @apply w-full border-b border-ao-mid-blue-300 dark:border-slate-800 p-4 sm:px-5 xl:px-0;
+    @apply w-full sticky top-0 z-10 bg-ao-mid-blue-200 dark:bg-slate-900 border-b border-ao-mid-blue-300 dark:border-slate-800 p-4 sm:px-5 xl:px-0;
 }
 header > div {
     @apply flex flex-col relative max-w-7xl mx-auto sm:flex-row sm:justify-between sm:items-center;

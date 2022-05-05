@@ -32,7 +32,7 @@ export default {
 
 <style>
 nav {
-    @apply relative md:w-72;
+    @apply relative md:w-72 md:fixed;
 }
 nav button {
     @apply absolute left-0 top-0 text-ao-mid-blue-800 dark:text-slate-200 cursor-pointer md:hidden;
