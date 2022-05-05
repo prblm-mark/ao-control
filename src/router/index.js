@@ -10,12 +10,12 @@ const router = createRouter({
             component: ColoursView,
         },
         {
-            path: '/typography',
-            name: 'typography',
+            path: '/fonts',
+            name: 'fonts',
             // route level code-splitting
             // this generates a separate chunk (About.[hash].js) for this route
             // which is lazy-loaded when the route is visited.
-            component: () => import('../views/TypographyView.vue'),
+            component: () => import('../views/FontView.vue'),
         },
         {
             path: '/form-elements',

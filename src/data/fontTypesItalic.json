@@ -1,0 +1,43 @@
+[
+    {
+        "weight": "200",
+        "style": "italic",
+        "name": "Extra Light"
+    },
+    {
+        "weight": "300",
+        "style": "italic",
+        "name": "Light"
+    },
+    {
+        "weight": "400",
+        "style": "italic",
+        "name": "Normal"
+    },
+    {
+        "weight": "500",
+        "style": "italic",
+        "name": "Medium"
+    },
+    {
+        "weight": "600",
+        "style": "italic",
+        "name": "Semi Bold"
+    },
+    {
+        "weight": "700",
+        "style": "italic",
+        "name": "Bold"
+    },
+    {
+        "weight": "800",
+        "style": "italic",
+        "name": "Extra Bold"
+    },
+    {
+        "weight": "900",
+        "style": "italic",
+        "name": "Black"
+    }
+    
+]

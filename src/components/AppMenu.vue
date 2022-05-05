@@ -7,7 +7,7 @@
         <hr />
         <menu :class="{ block: showMenu }">
             <RouterLink to="/">Colours</RouterLink>
-            <RouterLink to="/typography">Typography</RouterLink>
+            <RouterLink to="/fonts">Fonts</RouterLink>
             <RouterLink to="/form-elements">Form Elements</RouterLink>
             <RouterLink to="/buttons">Buttons</RouterLink>
             <RouterLink to="/icons">Icons</RouterLink>

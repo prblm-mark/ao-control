@@ -1,7 +1,9 @@
 <template>
-    <div>
-        <h1>This is about Buttons</h1>
-    </div>
+    <main class="system-content">
+        <h2 class="system-heading">Buttons</h2>
+        <p>Some text</p>
+        <div class="system-panel"></div>
+    </main>
 </template>
 
 <style></style>
