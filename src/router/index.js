@@ -28,9 +28,9 @@ const router = createRouter({
             component: () => import('../views/ButtonView.vue'),
         },
         {
-            path: '/icons',
-            name: 'icons',
-            component: () => import('../views/IconView.vue'),
+            path: '/headings',
+            name: 'headings',
+            component: () => import('../views/HeadingView.vue'),
         },
     ],
 })

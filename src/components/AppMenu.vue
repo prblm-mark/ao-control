@@ -8,9 +8,9 @@
         <menu :class="{ block: showMenu }">
             <RouterLink to="/">Colours</RouterLink>
             <RouterLink to="/fonts">Fonts</RouterLink>
+            <RouterLink to="/headings">Headings</RouterLink>
             <RouterLink to="/form-elements">Form Elements</RouterLink>
             <RouterLink to="/buttons">Buttons</RouterLink>
-            <RouterLink to="/icons">Icons</RouterLink>
         </menu>
     </nav>
 </template>
