@@ -28,7 +28,8 @@ export default {
 
 <style scoped>
 .cc__form-checkbox {
-    @apply w-5 h-5 mr-2 focus:ring-transparent focus:border-ao-mid-blue-300 appearance-none checked:!border-ao-mid-blue-500 transition-colors;
+    @apply w-5 h-5 mr-2 focus:ring-transparent focus:ring-0 focus:outline-none focus:ring-offset-0 focus:border-ao-mid-blue-300 appearance-none 
+    checked:!border-ao-mid-blue-500 dark:checked:bg-ao-light-blue dark:checked:!border-transparent dark:focus:border-slate-700 transition-colors;
 }
 .cc__form-checkbox + label {
     @apply mb-0;

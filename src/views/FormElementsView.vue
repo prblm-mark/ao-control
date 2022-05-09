@@ -5,71 +5,85 @@
             Form element types are a key to the control center, and therefore
             there are lots of states and variations to consider.
         </p>
-        <div class="system-panel">
-            <form
-                class="grid sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 items-end"
-            >
-                <BaseInput
-                    :v-model="inputText"
-                    label="Text"
-                    type="text"
-                    placeholder="Enter your name"
-                    :error="error"
-                    @change="handleChange"
-                />
-                <BaseInput
-                    :v-model="inputNumber"
-                    label="Number"
-                    type="number"
-                    placeholder="Enter you age"
-                    @change="handleChange"
-                />
-                <BaseInput
-                    :v-model="inputEmail"
-                    label="Email"
-                    type="email"
-                    placeholder="Email"
-                    @change="handleChange"
-                />
-                <BaseInput
-                    :v-model="inputPassword"
-                    label="Password"
-                    type="password"
-                    placeholder="Password"
-                    @change="handleChange"
-                />
-                <BaseInput
-                    :v-model="inputUrl"
-                    label="URL"
-                    type="url"
-                    placeholder="Enter url"
-                    @change="handleChange"
-                />
-                <BaseInput
-                    :v-model="inputDate"
-                    label="Date"
-                    type="date"
-                    placeholder="Select date"
-                    @change="handleChange"
-                />
+        <div class="cc__card">
+            <div class="cc__card-heading">
+                <div>
+                    <h2 class="cc__h2">Basic</h2>
+                </div>
+            </div>
+            <div class="cc__card-content">
+                <form
+                    class="grid sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 items-end"
+                >
+                    <BaseInput
+                        :v-model="inputText"
+                        label="Text"
+                        type="text"
+                        placeholder="Enter your name"
+                        :error="error"
+                        @change="handleChange"
+                    />
+                    <BaseInput
+                        :v-model="inputNumber"
+                        label="Number"
+                        type="number"
+                        placeholder="Enter you age"
+                        @change="handleChange"
+                    />
+                    <BaseInput
+                        :v-model="inputEmail"
+                        label="Email"
+                        type="email"
+                        placeholder="Email"
+                        @change="handleChange"
+                    />
+                    <BaseInput
+                        :v-model="inputPassword"
+                        label="Password"
+                        type="password"
+                        placeholder="Password"
+                        @change="handleChange"
+                    />
+                    <BaseInput
+                        :v-model="inputUrl"
+                        label="URL"
+                        type="url"
+                        placeholder="Enter url"
+                        @change="handleChange"
+                    />
+                    <BaseInput
+                        :v-model="inputDate"
+                        label="Date"
+                        type="date"
+                        placeholder="Select date"
+                        @change="handleChange"
+                    />
 
-                <BaseInput
-                    :v-model="inputDisabled"
-                    label="Disabled"
-                    type="text"
-                    disabled
-                    placeholder="This is disabled"
-                    @change="handleChange"
-                />
-                <BaseSelect
-                    :modelValue="inputSelect"
-                    :options="formSelectOptions"
-                    label="Basic Select"
-                    @change="handleChange"
-                />
-
-                <BaseCheckbox :modelValue="inputCheckbox" label="Checkbox" />
-            </form>
+                    <BaseInput
+                        :v-model="inputDisabled"
+                        label="Disabled"
+                        type="text"
+                        disabled
+                        placeholder="This is disabled"
+                        @change="handleChange"
+                    />
+                    <BaseSelect
+                        :modelValue="inputSelect"
+                        :options="formSelectOptions"
+                        label="Basic Select"
+                        @change="handleChange"
+                    />
+                    <BaseCheckbox
+                        :modelValue="inputCheckbox"
+                        label="Checkbox"
+                    />
+                    <BaseRadioGroup
+                        :modelValue="share"
+                        :options="shareOptions"
+                        :name="share"
+                    />
+                </form>
+            </div>
         </div>
     </main>
 </template>
@@ -80,12 +94,14 @@ import BaseInput from '@/components/forms/BaseInput.vue'
 import formSelectOptions from '@/data/formSelectOptions.json'
 import BaseSelect from '../components/forms/BaseSelect.vue'
 import BaseCheckbox from '../components/forms/BaseCheckbox.vue'
+import BaseRadioGroup from '@/components/forms/BaseRadioGroup.vue'
 
 export default {
     components: {
         BaseInput,
         BaseSelect,
         BaseCheckbox,
+        BaseRadioGroup,
     },
 
     setup() {
@@ -97,9 +113,17 @@ export default {
         const inputDate = ref('')
         const inputDisabled = ref()
         const inputSelect = ref('Default Option')
+        const inputCheckbox = ref()
+        const inputRadio = ref()
         const error = ref('')
+        const share = ref(1)
+        const shareOptions = ref([
+            { label: 'Yes', value: 1 },
+            { label: 'No', value: 0 },
+        ])
 
         const handleChange = (e) => {
+            // Create a dummy error if 'error' is typed
             const result = e.target.value
             result.toLowerCase()
             result === 'error'
@@ -119,6 +143,10 @@ export default {
             inputSelect,
             formSelectOptions,
             error,
+            inputCheckbox,
+            inputRadio,
+            share,
+            shareOptions,
         }
     },
 }
