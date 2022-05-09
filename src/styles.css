@@ -73,7 +73,7 @@
         @apply bg-white dark:bg-slate-800 shadow-md rounded-lg mb-6 md:mb-10;
     }
     .cc__card-heading {
-        @apply flex items-center justify-between p-3 md:px-5 md:py-4 border-b border-ao-mid-blue-200 dark:border-slate-900;
+        @apply flex items-center justify-between p-3 md:p-5 border-b border-ao-mid-blue-200 dark:border-slate-900;
     }
     .cc__card-no-border {
         @apply border-0 pb-0;

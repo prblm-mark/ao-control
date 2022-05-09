@@ -64,6 +64,25 @@
         </div>
 
         <div class="cc__card">
+            <div class="cc__card-heading">
+                <div>
+                    <h6 class="cc__h6">Heading 6</h6>
+                    <h2 class="cc__h2">Heading 2</h2>
+                </div>
+
+                <PrimaryButton label="Save" />
+            </div>
+
+            <div class="cc__card-content">
+                <p>
+                    The heading 2 can also be accompanied by a Heading 6
+                    subtitle, and additional icons, cta's or inputs aligned to
+                    the right.
+                </p>
+            </div>
+        </div>
+
+        <div class="cc__card">
             <div class="cc__card-heading cc__card-no-border">
                 <div>
                     <h6 class="cc__h6">Heading 6</h6>
@@ -91,6 +110,7 @@
 
 <script setup>
 import IconLight from '@/components/icons/IconLight.vue'
+import PrimaryButton from '../components/buttons/PrimaryButton.vue'
 </script>
 
 <style scoped></style>
