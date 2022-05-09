@@ -7,13 +7,14 @@
         </p>
         <div class="system-panel">
             <form
-                class="grid sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6"
+                class="grid sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 items-end"
             >
                 <BaseInput
                     :v-model="inputText"
                     label="Text"
                     type="text"
                     placeholder="Enter your name"
+                    :error="error"
                     @change="handleChange"
                 />
                 <BaseInput
@@ -51,6 +52,23 @@
                     placeholder="Select date"
                     @change="handleChange"
                 />
+
+                <BaseInput
+                    :v-model="inputDisabled"
+                    label="Disabled"
+                    type="text"
+                    disabled
+                    placeholder="This is disabled"
+                    @change="handleChange"
+                />
+                <BaseSelect
+                    :modelValue="inputSelect"
+                    :options="formSelectOptions"
+                    label="Basic Select"
+                    @change="handleChange"
+                />
+
+                <BaseCheckbox :modelValue="inputCheckbox" label="Checkbox" />
             </form>
         </div>
     </main>
@@ -59,10 +77,15 @@
 <script>
 import { ref } from 'vue'
 import BaseInput from '@/components/forms/BaseInput.vue'
+import formSelectOptions from '@/data/formSelectOptions.json'
+import BaseSelect from '../components/forms/BaseSelect.vue'
+import BaseCheckbox from '../components/forms/BaseCheckbox.vue'
 
 export default {
     components: {
         BaseInput,
+        BaseSelect,
+        BaseCheckbox,
     },
 
     setup() {
@@ -72,8 +95,17 @@ export default {
         const inputPassword = ref('')
         const inputUrl = ref('')
         const inputDate = ref('')
+        const inputDisabled = ref()
+        const inputSelect = ref('Default Option')
+        const error = ref('')
 
-        const handleChange = (e) => console.log(e.target.value)
+        const handleChange = (e) => {
+            const result = e.target.value
+            result.toLowerCase()
+            result === 'error'
+                ? (error.value = 'This is some error text')
+                : (error.value = '')
+        }
 
         return {
             inputText,
@@ -83,6 +115,10 @@ export default {
             inputUrl,
             inputDate,
             handleChange,
+            inputDisabled,
+            inputSelect,
+            formSelectOptions,
+            error,
         }
     },
 }

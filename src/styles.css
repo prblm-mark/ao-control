@@ -23,7 +23,7 @@
         @apply w-full md:ml-72 pt-6 md:pt-0;
     }
     .system-heading {
-        @apply text-ao-mid-blue-700 dark:text-slate-200 leading-tight font-extrabold text-2xl mb-1 ;
+        @apply text-ao-mid-blue-700 dark:text-slate-200 leading-tight tracking-tight font-extrabold text-2xl mb-1 ;
     }
     .system-heading:not(:first-of-type) {
         @apply border-t border-ao-mid-blue-300 dark:border-slate-800 pt-8;
