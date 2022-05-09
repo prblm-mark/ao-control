@@ -1,6 +1,6 @@
 <template>
     <button class="cc__btn-secondary" :class="{ 'w-full': full }">
-        <span v-if="icon" class="mr-2 -ml-0.5"><slot name="icon"></slot></span>
+        <span v-if="icon" class="mr-2 -ml-0.5"><slot name="icon" /></span>
         {{ label }}
     </button>
 </template>

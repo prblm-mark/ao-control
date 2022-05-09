@@ -61,7 +61,7 @@ export default {
     @apply inline-block text-sm text-ao-mid-blue-700 dark:text-slate-400 font-semibold mb-1;
 }
 .cc__form-field {
-    @apply w-full bg-white dark:bg-slate-900 text-ao-dark-blue-500 dark:text-slate-300 font-medium rounded text-sm border-ao-mid-blue-300 
+    @apply p-2.5 w-full bg-white dark:bg-slate-900 text-ao-dark-blue-500 dark:text-slate-300 font-medium rounded text-sm border-ao-mid-blue-300 
     dark:border-slate-700 shadow-sm hover:shadow hover:border-ao-mid-blue-400 dark:hover:border-slate-600 focus:outline-none focus:border-transparent 
     focus:ring-2 dark:focus:ring-1 focus:ring-ao-mid-blue-500 dark:focus:ring-ao-light-blue placeholder:text-ao-dark-blue-400 
     dark:placeholder:text-slate-500 placeholder:font-normal autofill:!text-ao-dark-blue-500 autofill:!bg-white dark:autofill:!bg-slate-800 dark:autofill:!text-slate-300

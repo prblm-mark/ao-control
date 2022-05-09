@@ -116,7 +116,7 @@ export default {
         const inputCheckbox = ref()
         const inputRadio = ref()
         const error = ref('')
-        const share = ref(1)
+        const share = ref('1')
         const shareOptions = ref([
             { label: 'Yes', value: 1 },
             { label: 'No', value: 0 },

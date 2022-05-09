@@ -34,7 +34,7 @@ export default {
 
 <style scoped>
 .cc__form-radio {
-    @apply w-5 h-5 !rounded-full mr-2 focus:ring-transparent focus:ring-0 focus:outline-none focus:ring-offset-0 focus:hover:border-transparent dark:checked:bg-ao-light-blue dark:focus:ring-0 appearance-none transition-colors;
+    @apply w-5 h-5 p-2 !rounded-full mr-2 focus:ring-transparent focus:ring-0 focus:outline-none focus:ring-offset-0 focus:hover:border-transparent dark:checked:bg-ao-light-blue dark:focus:ring-0 appearance-none transition-colors;
 }
 .cc__form-radio + label {
     @apply mb-0;

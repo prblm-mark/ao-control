@@ -86,10 +86,10 @@
         @apply text-xs md:text-sm text-ao-mid-blue-600 dark:text-slate-400 p-3 md:p-5;
     }
     .cc__heading-line {
-        @apply relative w-full;
+        @apply relative w-full mb-4;
     }
     .cc__heading-line .cc__h3 {
-        @apply inline bg-ao-mid-blue-200 dark:bg-slate-900 pr-4;
+        @apply inline bg-ao-mid-blue-200 dark:bg-slate-900 pr-3 md:pr-4;
     }
     .cc__heading-line:after {
         @apply h-[1px] absolute top-1/2 right-0 w-full bg-ao-mid-blue-300 dark:bg-slate-700 content-[''] -z-10;

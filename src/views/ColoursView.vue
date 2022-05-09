@@ -22,7 +22,7 @@ import colourPaletteSecondary from '@/data/colourPaletteSecondary.json'
 
         <h2 class="system-heading">Secondary Colour Palette</h2>
         <p>
-            The secoondary colour palette should only be used when addiotnal
+            The secondary colour palette should only be used when addiotnal
             colours are required. For example, use within charts and complex
             data
         </p>
