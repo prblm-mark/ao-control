@@ -62,7 +62,7 @@ export default {
 }
 .cc__form-field {
     @apply p-2.5 w-full bg-white dark:bg-slate-900 text-ao-dark-blue-500 dark:text-slate-300 font-medium rounded text-sm border-ao-mid-blue-300 
-    dark:border-slate-700 shadow-sm hover:shadow hover:border-ao-mid-blue-400 dark:hover:border-slate-600 focus:outline-none focus:border-transparent 
+    dark:border-slate-700 drop-shadow-sm hover:drop-shadow hover:border-ao-mid-blue-400 dark:hover:border-slate-600 focus:outline-none focus:border-transparent 
     focus:ring-2 dark:focus:ring-1 focus:ring-ao-mid-blue-500 dark:focus:ring-ao-light-blue placeholder:text-ao-dark-blue-400 
     dark:placeholder:text-slate-500 placeholder:font-normal autofill:!text-ao-dark-blue-500 autofill:!bg-white dark:autofill:!bg-slate-800 dark:autofill:!text-slate-300
     disabled:bg-ao-mid-blue-100 disabled:hover:border-ao-mid-blue-300 dark:disabled:bg-slate-800 dark:disabled:hover:border-slate-700 disabled:hover:shadow-sm appearance-none transition-shadow;
@@ -93,5 +93,27 @@ select.cc__form-field {
 /* Add date icon to date input */
 .cc__form-field[type='date'] {
     @apply bg-icon-date dark:bg-icon-date-dark bg-no-repeat bg-right-center;
+}
+
+/* Hack to remove autofill color on Browser default */
+.cc__form-field:-webkit-autofill,
+.cc__form-field:-webkit-autofill:hover,
+.cc__form-field:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset;
+    -webkit-text-fill-color: #667f89;
+    @apply border-ao-mid-blue-300;
+}
+.cc__form-field:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #fff inset, 0 0 0 2px #7192a4;
+    @apply border-white;
+}
+.dark .cc__form-field:-webkit-autofill,
+.dark .cc__form-field:-webkit-autofill:hover {
+    -webkit-box-shadow: 0 0 0px 1000px #0f172a inset;
+    @apply border-slate-700;
+}
+.dark .cc__form-field:-webkit-autofill:focus {
+    -webkit-box-shadow: 0 0 0px 1000px #0f172a inset, 0 0 0 2px #00afbe;
+    @apply border-slate-900;
 }
 </style>
