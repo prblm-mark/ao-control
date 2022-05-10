@@ -24,7 +24,7 @@
             <SecondaryButton label="Clear" :full="true" />
         </span>
 
-        <span class="col-start-1 col-span-full">
+        <span class="col-start-1 col-span-full mt-2">
             <BaseCheckbox
                 :modelValue="compare"
                 label="Compare to previous year"

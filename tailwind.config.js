@@ -74,6 +74,13 @@ module.exports = {
                     DEFAULT: '#22A573',
                 },
             },
+            backgroundImage: {
+                'icon-date': "url('@/assets/date-icon.svg')",
+                'icon-date-dark': "url('@/assets/date-icon-dark.svg')",
+            },
+            backgroundPosition: {
+                'right-center': 'calc(100% - .5rem) center',
+            },
         },
     },
     corePlugins: {

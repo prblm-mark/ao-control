@@ -65,21 +65,33 @@ export default {
     dark:border-slate-700 shadow-sm hover:shadow hover:border-ao-mid-blue-400 dark:hover:border-slate-600 focus:outline-none focus:border-transparent 
     focus:ring-2 dark:focus:ring-1 focus:ring-ao-mid-blue-500 dark:focus:ring-ao-light-blue placeholder:text-ao-dark-blue-400 
     dark:placeholder:text-slate-500 placeholder:font-normal autofill:!text-ao-dark-blue-500 autofill:!bg-white dark:autofill:!bg-slate-800 dark:autofill:!text-slate-300
-    disabled:bg-ao-mid-blue-100 disabled:hover:border-ao-mid-blue-300 dark:disabled:bg-slate-800 dark:disabled:hover:border-slate-700 disabled:hover:shadow-sm transition-shadow;
+    disabled:bg-ao-mid-blue-100 disabled:hover:border-ao-mid-blue-300 dark:disabled:bg-slate-800 dark:disabled:hover:border-slate-700 disabled:hover:shadow-sm appearance-none transition-shadow;
 }
-select.cc__form-field {
-    @apply pl-2;
+/* Error style for Input/Text */
+.cc__form-error {
+    @apply w-full mt-1 text-red-500 text-xs font-medium tracking-wide;
 }
 .cc__form-field-error {
     @apply focus:ring-red-500 dark:focus:ring-red-500 focus:ring-1 !border-red-500  bg-red-50 placeholder:text-red-500;
 }
+
+/* Select element needs slighly adjusted padding */
+select.cc__form-field {
+    @apply pl-2;
+}
+
+/* Hide arrows to increment number on Firefox */
 .cc__form-field[type='number'] {
     -moz-appearance: textfield;
 }
+
+/* Hide calendar icon on Chrome/Date Input */
 .cc__form-field[type='date']::-webkit-calendar-picker-indicator {
     background: none;
 }
-.cc__form-error {
-    @apply w-full mt-1 text-red-500 text-xs font-medium tracking-wide;
+
+/* Add date icon to date input */
+.cc__form-field[type='date'] {
+    @apply bg-icon-date dark:bg-icon-date-dark bg-no-repeat bg-right-center;
 }
 </style>
