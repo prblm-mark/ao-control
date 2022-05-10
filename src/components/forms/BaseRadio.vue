@@ -1,5 +1,5 @@
 <template>
-    <div class="cc__form-element">
+    <div class="cc__form-element cc__form-element-radio">
         <input
             type="radio"
             :checked="modelValue === value"
@@ -33,6 +33,9 @@ export default {
 </script>
 
 <style scoped>
+.cc__form-element-radio {
+    @apply inline-flex items-center;
+}
 .cc__form-radio {
     @apply w-5 h-5 p-2 !rounded-full mr-2 focus:ring-transparent focus:ring-0 focus:outline-none focus:ring-offset-0 focus:hover:border-transparent dark:checked:bg-ao-light-blue dark:focus:ring-0 appearance-none transition-colors;
 }

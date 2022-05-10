@@ -1,6 +1,6 @@
 <template>
     <div class="cc__form-element">
-        <label class="cc__form-label">{{ label }}</label>
+        <label v-if="label" class="cc__form-label">{{ label }}</label>
         <select
             class="cc__form-field"
             :value="modelValue"
@@ -26,6 +26,7 @@ export default {
         label: {
             type: String,
             default: '',
+            required: false,
         },
         modelValue: {
             type: [String, Number],

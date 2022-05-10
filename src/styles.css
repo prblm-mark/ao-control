@@ -66,6 +66,9 @@
     .cc__h3 {
         @apply text-ao-mid-blue-700 dark:text-slate-200 md:text-lg font-bold tracking-tight;
     }
+    .cc__h4 {
+        @apply text-ao-mid-blue-700 dark:text-slate-200 text-base font-bold tracking-tight;
+    }
     .cc__h6 {
         @apply text-ao-mid-blue-500 dark:text-slate-400 text-xs md:text-sm font-medium;
     }

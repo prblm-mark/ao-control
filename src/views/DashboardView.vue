@@ -35,6 +35,7 @@
         </div>
 
         <HeadingBreak :heading="'Date Selector'" />
+        <DateSelector />
     </main>
 </template>
 
@@ -44,6 +45,7 @@ import IconClipboard from '../components/icons/IconClipboard.vue'
 import IconDocumentation from '../components/icons/IconDocumentation.vue'
 import IconFilter from '../components/icons/IconFilter.vue'
 import HeadingBreak from '../components/headings/HeadingBreak.vue'
+import DateSelector from '../components/dashboard/DateSelector.vue'
 export default {
     setup() {
         return {}
@@ -54,6 +56,7 @@ export default {
         IconDocumentation,
         IconFilter,
         HeadingBreak,
+        DateSelector,
     },
 }
 </script>

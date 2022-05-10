@@ -1,5 +1,5 @@
 <template>
-    <div class="cc__form-element mb-2">
+    <div class="cc__form-element cc__form-element-checkbox">
         <input
             type="checkbox"
             :checked="modelValue"
@@ -26,7 +26,10 @@ export default {
 }
 </script>
 
-<style scoped>
+<style>
+.cc__form-element-checkbox {
+    @apply inline-flex items-center;
+}
 .cc__form-checkbox {
     @apply w-5 h-5 p-2 mr-2 focus:ring-transparent focus:ring-0 focus:outline-none focus:ring-offset-0 focus:border-ao-mid-blue-300 appearance-none 
     checked:!border-ao-mid-blue-500 dark:checked:bg-ao-light-blue dark:checked:!border-transparent dark:focus:border-slate-700 transition-colors;

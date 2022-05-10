@@ -32,7 +32,7 @@ export default {
 <style scoped>
 .cc__btn-primary {
     @apply bg-ao-green text-white text-sm font-bold inline-flex justify-center 
-    items-center py-3 px-4 rounded shadow-sm hover:shadow hover:bg-ao-green-600 whitespace-nowrap 
+    items-center py-3 px-4 rounded shadow-sm hover:shadow hover:bg-ao-green-700 whitespace-nowrap 
     dark:bg-ao-light-blue dark:hover:bg-ao-light-blue-700 dark:text-slate-100 transition-colors;
 }
 </style>

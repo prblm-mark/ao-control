@@ -1,6 +1,6 @@
 <template>
     <div class="cc__form-element">
-        <label class="cc__form-label">{{ label }}</label>
+        <label v-if="label" class="cc__form-label">{{ label }}</label>
         <input
             class="cc__form-field"
             :class="errorClass"
