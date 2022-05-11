@@ -39,20 +39,53 @@
             <DateSelector />
         </div>
 
-        <HeadingBreak :heading="'Dashboard Table [Option 1]'" />
+        <h2 class="system-heading">Dashboard Table Options</h2>
         <p>
-            As the tables are being displayed in a limited space, due to this
-            screen having a fixed menu, they are best view in full screen mode.
+            These tables have been designed to be full width, as they will
+            feature within the Dashboard screen. As the tables below are being
+            displayed in a limited space due to this reference screen having a
+            fixed left column menu on desktop, they are best viewed in full
+            screen mode at this viewport.
+            <br />
+            <b class="text-sm pt-2 block"
+                >Tip: Toggle the theme color before viewing</b
+            >
         </p>
-        <DashboardTable
-            :overviewData="dashboardMainData"
-            :listingData="dashboardListingData"
-        />
-        <HeadingBreak :heading="'Dashboard Table [Option 2]'" />
+        <span class="mb-12 block" @click="toggleVisibility">
+            <SecondaryButton label="Full Screen View" />
+        </span>
+
+        <HeadingBreak :heading="'Table [Option 1]'" />
         <DashboardTableGrid
             :overviewData="dashboardMainData"
             :listingData="dashboardListingData"
         />
+
+        <HeadingBreak :heading="'Table [Option 2]'" />
+        <DashboardTable
+            :overviewData="dashboardMainData"
+            :listingData="dashboardListingData"
+        />
+
+        <div class="modal">
+            <span @click="toggleVisibility" class="close">
+                <IconClose />
+            </span>
+
+            <div class="max-w-[1280px]">
+                <HeadingBreak :heading="'Table [Option 1]'" />
+                <DashboardTableGrid
+                    :overviewData="dashboardMainData"
+                    :listingData="dashboardListingData"
+                />
+
+                <HeadingBreak :heading="'Table [Option 2]'" />
+                <DashboardTable
+                    :overviewData="dashboardMainData"
+                    :listingData="dashboardListingData"
+                />
+            </div>
+        </div>
     </main>
 </template>
 
@@ -68,8 +101,14 @@ import DashboardTable from '../components/dashboard/DashboardTable.vue'
 import dashboardMainData from '@/data/dashboardMainData.json'
 import dashboardListingData from '@/data/dashboardListingData.json'
 import DashboardTableGrid from '../components/dashboard/DashboardTableGrid.vue'
+import SecondaryButton from '../components/buttons/SecondaryButton.vue'
+import IconClose from '../components/icons/IconClose.vue'
 export default defineComponent({
     setup() {
+        const toggleVisibility = () => {
+            document.documentElement.classList.toggle('visible')
+        }
+
         return {
             StatCard,
             IconClipboard,
@@ -79,6 +118,7 @@ export default defineComponent({
             DateSelector,
             dashboardMainData,
             dashboardListingData,
+            toggleVisibility,
         }
     },
     components: {
@@ -90,8 +130,21 @@ export default defineComponent({
         DateSelector,
         DashboardTable,
         DashboardTableGrid,
+        SecondaryButton,
+        IconClose,
     },
 })
 </script>
 
-<style scoped></style>
+<style scoped>
+/* Just temp styles for reference screens */
+.modal {
+    @apply w-full min-h-screen fixed inset-0 bg-ao-mid-blue-200 dark:bg-slate-900 z-20 justify-center  p-6 pt-12 lg:p-10 lg:pt-16 overflow-y-auto hidden;
+}
+.visible .modal {
+    @apply flex;
+}
+.close {
+    @apply absolute top-4 right-4 lg:top-5 lg:right-5 cursor-pointer opacity-75 hover:opacity-100;
+}
+</style>

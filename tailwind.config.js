@@ -81,6 +81,10 @@ module.exports = {
             backgroundPosition: {
                 'right-center': 'calc(100% - .5rem) center',
             },
+            gridTemplateColumns: {
+                'dashboard-table': 'minmax(min-content, 450px) 1fr',
+                'dashboard-table-lg': 'minmax(min-content, 350px) 1fr',
+            },
         },
     },
     corePlugins: {

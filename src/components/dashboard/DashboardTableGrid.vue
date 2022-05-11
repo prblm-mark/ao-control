@@ -31,6 +31,7 @@
                                 </span>
                                 {{ data.stat }}
                             </h3>
+
                             <span class="cc__table-overview-details">
                                 {{ data.detailsTitle }} <br />
                                 {{ data.details }}
@@ -47,8 +48,18 @@
                 :key="index"
             >
                 <div class="cc__table-listing-main">
-                    <a href="#">{{ data.title }}</a>
-                    <span @click="toggleVisibility($event)">
+                    <div>
+                        <span class="cc__h3 cc__table-listing-counter">
+                            {{ index + 1 }}
+                        </span>
+
+                        <a href="#">{{ data.title }}</a>
+                    </div>
+
+                    <span
+                        class="cc__table-listing-more"
+                        @click="toggleVisibility($event)"
+                    >
                         <IconMore />
                     </span>
                 </div>
@@ -59,6 +70,7 @@
                                 <h3 class="cc__h6 cc__table-subheading">
                                     {{ stat.name }}
                                 </h3>
+
                                 <b>{{ stat.details }}</b>
                                 {{ stat.detailsPercent }}
                             </td>
@@ -100,7 +112,7 @@ export default defineComponent({
 
 <style scoped>
 .cc__table-container {
-    @apply grid lg:grid-cols-[minmax(min-content,_300px)_1fr] border-b border-ao-mid-blue-200 dark:border-slate-900 overflow-x-auto;
+    @apply grid lg:grid-cols-dashboard-table-lg xl:grid-cols-dashboard-table border-b border-ao-mid-blue-200 dark:border-slate-900 overflow-x-auto;
 }
 /* General table styles */
 .cc__table {
@@ -127,7 +139,7 @@ export default defineComponent({
 }
 .cc__table-overview td,
 .cc__table-listing td {
-    @apply border-b lg:border-b-0 border-l-0 lg:border-l odd:border-r last:border-b-0 border-ao-mid-blue-200 dark:border-slate-900;
+    @apply border-b lg:border-b-0 border-l-0 lg:border-l odd:border-r lg:last:!border-r-0 last:border-b-0 border-ao-mid-blue-200 dark:border-slate-900;
 }
 .cc__table-overview-details {
     @apply text-xs block leading-tight text-ao-mid-blue-500 dark:text-slate-400;
@@ -140,28 +152,32 @@ export default defineComponent({
     @apply col-start-1 col-span-full;
 }
 .cc__table-listing-grid {
-    @apply grid lg:grid-cols-[minmax(min-content,_300px)_1fr];
+    @apply grid lg:grid-cols-dashboard-table-lg xl:grid-cols-dashboard-table;
 }
 .cc__table-listing-main {
-    @apply flex items-center col-span-1 p-3 border-b border-ao-mid-blue-200 dark:border-slate-900;
+    @apply flex items-center justify-between col-span-1 p-3 border-b border-ao-mid-blue-200 dark:border-slate-900;
 }
+
 .cc__table-listing-grid:last-of-type .cc__table-listing-main {
     @apply lg:border-b-0;
 }
-/* .cc__table-listing-main {
-    @apply bg-ao-mid-blue-100;
-} */
 .cc__table-listing-main a {
-    @apply text-sm font-bold inline-block pr-2 lg:pr-0 hover:text-ao-mid-blue-500 dark:text-slate-300 transition-colors leading-tight line-clamp-2;
+    @apply text-sm font-bold inline-block pr-3 md:pr-4 lg:pr-0 hover:text-ao-mid-blue-500 dark:text-slate-300 transition-colors leading-tight line-clamp-2;
 }
-.cc__table-listing-main span {
+.cc__table-listing-main > div {
+    @apply inline-flex;
+}
+.cc__table-listing-counter {
+    @apply text-ao-teal dark:text-ao-light-blue ml-0.5 mr-3 lg:mr-4 text-2xl font-bold;
+}
+.cc__table-listing-more {
     @apply lg:hidden cursor-pointer text-ao-mid-blue-400 hover:text-ao-mid-blue-600 dark:text-slate-600 dark:hover:text-slate-400 transition-colors;
 }
 .cc__table-listing-details {
     @apply overflow-x-auto;
 }
 .cc__table-listing-details td {
-    @apply text-xs leading-tight text-ao-mid-blue-700 lg:text-ao-mid-blue-500 dark:text-slate-400;
+    @apply text-sm lg:text-xs leading-tight text-ao-mid-blue-700 lg:text-ao-mid-blue-600 dark:text-slate-400;
 }
 .cc__table-listing .cc__table-subheading {
     @apply mb-1 lg:hidden;

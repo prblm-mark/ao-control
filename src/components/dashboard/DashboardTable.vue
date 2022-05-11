@@ -44,7 +44,13 @@
                 :key="index"
             >
                 <div class="cc__table-listing-main">
-                    <a href="#">{{ data.title }}</a>
+                    <div>
+                        <span class="cc__h3 cc__table-listing-counter">
+                            {{ index + 1 }}
+                        </span>
+
+                        <a href="#">{{ data.title }}</a>
+                    </div>
                 </div>
                 <div class="cc__table-listing-details">
                     <table class="cc__table">
@@ -88,7 +94,7 @@ export default defineComponent({
 
 <style scoped>
 .cc__table-container {
-    @apply grid lg:grid-cols-[minmax(min-content,_300px)_1fr] border-b border-ao-mid-blue-200 dark:border-slate-900 overflow-x-auto;
+    @apply grid lg:grid-cols-dashboard-table-lg xl:grid-cols-dashboard-table border-b border-ao-mid-blue-200 dark:border-slate-900 overflow-x-auto;
 }
 /* General table styles */
 .cc__table {
@@ -113,10 +119,16 @@ export default defineComponent({
     @apply col-start-1 col-span-full;
 }
 .cc__table-listing-grid {
-    @apply grid lg:grid-cols-[minmax(min-content,_300px)_1fr];
+    @apply grid lg:grid-cols-dashboard-table-lg xl:grid-cols-dashboard-table;
 }
 .cc__table-listing-main {
     @apply col-span-1 p-3 border-b border-ao-mid-blue-200 dark:border-slate-900;
+}
+.cc__table-listing-main > div {
+    @apply inline-flex;
+}
+.cc__table-listing-counter {
+    @apply text-ao-teal dark:text-ao-light-blue ml-0.5 mr-3 lg:mr-4 text-2xl font-bold;
 }
 .cc__table-listing-grid:last-of-type .cc__table-listing-main {
     @apply lg:border-b-0;
@@ -128,7 +140,7 @@ export default defineComponent({
     @apply overflow-x-auto;
 }
 .cc__table-listing-details td {
-    @apply text-xs leading-tight text-ao-mid-blue-700 lg:text-ao-mid-blue-500 dark:text-slate-400;
+    @apply text-xs leading-tight text-ao-mid-blue-700 lg:text-ao-mid-blue-600 dark:text-slate-400;
 }
 .cc__table-listing .cc__table-subheading {
     @apply mb-1 lg:hidden;

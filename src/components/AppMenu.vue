@@ -54,6 +54,6 @@ nav a:hover {
     @apply text-ao-mid-blue-800 border-ao-mid-blue-400 dark:text-slate-200 dark:border-slate-500;
 }
 nav a.router-link-exact-active {
-    @apply font-semibold text-ao-mid-blue border-ao-mid-blue dark:text-ao-light-blue dark:border-ao-light-blue;
+    @apply font-semibold text-ao-teal border-ao-teal dark:text-ao-light-blue dark:border-ao-light-blue;
 }
 </style>
