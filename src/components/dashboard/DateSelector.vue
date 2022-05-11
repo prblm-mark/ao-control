@@ -34,14 +34,14 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import BaseInput from '../forms/BaseInput.vue'
 import BaseCheckbox from '../forms/BaseCheckbox.vue'
 import PrimaryButton from '../buttons/PrimaryButton.vue'
 import SecondaryButton from '../buttons/SecondaryButton.vue'
 import BaseSelect from '../forms/BaseSelect.vue'
 
-export default {
+export default defineComponent({
     components: {
         BaseInput,
         BaseCheckbox,
@@ -58,7 +58,7 @@ export default {
         const handleChange = (e) => console.log(e.target.value)
         return { options, date, duration, compare, handleChange }
     },
-}
+})
 </script>
 
 <style>

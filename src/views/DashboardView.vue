@@ -5,7 +5,7 @@
 
         <HeadingBreak :heading="'Statistic Cards'" />
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-10">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
             <StatCard :status="'up'">
                 <template #title> Users </template>
                 <template #icon>
@@ -35,7 +35,22 @@
         </div>
 
         <HeadingBreak :heading="'Date Selector'" />
-        <DateSelector />
+        <div class="md:gap-6 mb-12">
+            <DateSelector />
+        </div>
+
+        <HeadingBreak :heading="'Dashboard Table [Option 1]'" />
+        <p>
+            As the tables are being displayed in a limited space, due to this
+            screen having a fixed menu, they are best view in full screen mode.
+        </p>
+        <DashboardTable
+            :overviewData="dashboardMainData"
+            :listingData="dashboardListingData"
+        />
+        <span class="hidden">
+            <DashboardTableGrid />
+        </span>
     </main>
 </template>
 
@@ -46,9 +61,23 @@ import IconDocumentation from '../components/icons/IconDocumentation.vue'
 import IconFilter from '../components/icons/IconFilter.vue'
 import HeadingBreak from '../components/headings/HeadingBreak.vue'
 import DateSelector from '../components/dashboard/DateSelector.vue'
-export default {
+import { defineComponent } from '@vue/runtime-core'
+import DashboardTable from '../components/dashboard/DashboardTable.vue'
+import DashboardTableGrid from '../components/dashboard/DashboardTableGrid.vue'
+import dashboardMainData from '@/data/dashboardMainData.json'
+import dashboardListingData from '@/data/dashboardListingData.json'
+export default defineComponent({
     setup() {
-        return {}
+        return {
+            StatCard,
+            IconClipboard,
+            IconDocumentation,
+            IconFilter,
+            HeadingBreak,
+            DateSelector,
+            dashboardMainData,
+            dashboardListingData,
+        }
     },
     components: {
         StatCard,
@@ -57,8 +86,10 @@ export default {
         IconFilter,
         HeadingBreak,
         DateSelector,
+        DashboardTable,
+        DashboardTableGrid,
     },
-}
+})
 </script>
 
 <style scoped></style>

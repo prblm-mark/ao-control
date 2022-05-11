@@ -1,0 +1,32 @@
+[
+    {
+        "name": "Page Views",
+        "stat": "109, 685",
+        "detailsTitle": "% of Total: ",
+        "details" : "100.00% (190, 685)"
+    },
+    {
+        "name": "Unique Page Views",
+        "stat": "162, 681",
+        "detailsTitle": "% of Total: ",
+        "details" : "100.00% (162, 681)"
+    },
+    {
+        "name": "Avg. Time on Page",
+        "stat": "00:01:43",
+        "detailsTitle": "Avg. for view: ",
+        "details" : "00:01:43 (0.00%)"
+    },
+    {
+        "name": "Entrances",
+        "stat": "127, 985",
+        "detailsTitle": "% of Total: ",
+        "details" : "100.00% (127, 985)"
+    },
+    {
+        "name": "% Exit",
+        "stat": "66.67%",
+        "detailsTitle": "Avg. for view:" ,
+        "details" : "66.67% (0.00%)"
+    }
+]

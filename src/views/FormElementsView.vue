@@ -89,14 +89,14 @@
 </template>
 
 <script>
-import { ref } from 'vue'
+import { defineComponent, ref } from 'vue'
 import BaseInput from '@/components/forms/BaseInput.vue'
 import formSelectOptions from '@/data/formSelectOptions.json'
 import BaseSelect from '../components/forms/BaseSelect.vue'
 import BaseCheckbox from '../components/forms/BaseCheckbox.vue'
 import BaseRadioGroup from '@/components/forms/BaseRadioGroup.vue'
 
-export default {
+export default defineComponent({
     components: {
         BaseInput,
         BaseSelect,
@@ -149,7 +149,7 @@ export default {
             shareOptions,
         }
     },
-}
+})
 </script>
 
 <style></style>

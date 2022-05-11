@@ -64,19 +64,22 @@
         @apply text-ao-mid-blue-700 dark:text-slate-200 text-lg md:text-xl font-bold tracking-tight;
     }
     .cc__h3 {
-        @apply text-ao-mid-blue-700 dark:text-slate-200 md:text-lg font-bold tracking-tight;
+        @apply text-ao-mid-blue-700 dark:text-slate-300 md:text-lg font-bold tracking-tight;
     }
     .cc__h4 {
-        @apply text-ao-mid-blue-700 dark:text-slate-200 text-base font-bold tracking-tight;
+        @apply text-ao-mid-blue-700 dark:text-slate-300 text-base font-bold tracking-tight;
     }
     .cc__h6 {
-        @apply text-ao-mid-blue-500 dark:text-slate-400 text-xs md:text-sm font-medium;
+        @apply text-ao-mid-blue-500 dark:text-slate-300 text-sm font-medium;
     }
     .cc__card {
         @apply bg-white dark:bg-slate-800 shadow-md rounded-lg mb-6 md:mb-10;
     }
     .cc__card-heading {
         @apply flex items-center justify-between p-3 md:px-5 md:py-4 border-b border-ao-mid-blue-200 dark:border-slate-900;
+    }
+    .cc__card-heading-aside a {
+        @apply inline-flex items-center space-x-2 text-ao-mid-blue-600 text-xs lg:text-sm font-semibold hover:text-ao-dark-blue-600 dark:text-slate-400 transition-colors;
     }
     .cc__card-no-border {
         @apply border-0 pb-0;
@@ -92,7 +95,7 @@
         @apply relative w-full mb-4;
     }
     .cc__heading-line .cc__h3 {
-        @apply inline bg-ao-mid-blue-200 dark:bg-slate-900 pr-3 md:pr-4;
+        @apply inline bg-ao-mid-blue-200 dark:bg-slate-900  pr-3 md:pr-4;
     }
     .cc__heading-line:after {
         @apply h-[1px] absolute top-1/2 right-0 w-full bg-ao-mid-blue-300 dark:bg-slate-700 content-[''] -z-10;
