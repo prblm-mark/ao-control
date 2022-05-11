@@ -23,6 +23,6 @@ const fontStyles = computed(() => {
     @apply text-ao-mid-blue-500 dark:text-slate-400 text-sm xl:mb-6 font-semibold;
 }
 .font-sample {
-    @apply text-xl md:text-2xl leading-tight;
+    @apply text-xl md:text-2xl leading-tight dark:text-slate-300;
 }
 </style>

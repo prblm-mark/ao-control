@@ -88,6 +88,9 @@
     .cc__card-heading h6 {
         @apply leading-tight;
     }
+    .cc__card-heading h6 {
+        @apply dark:text-slate-400;
+    }
     .cc__card-content {
         @apply text-xs md:text-sm text-ao-mid-blue-600 dark:text-slate-400 p-3 md:p-5;
     }

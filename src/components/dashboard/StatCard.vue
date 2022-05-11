@@ -52,7 +52,7 @@ export default {
     @apply bg-ao-aqua;
 }
 .cc__stat-card h3 {
-    @apply inline-flex mt-1;
+    @apply inline-flex items-center mt-1;
 }
 .cc__stat-card h3 span {
     @apply -ml-1;

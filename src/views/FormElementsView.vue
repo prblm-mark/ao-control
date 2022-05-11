@@ -52,10 +52,10 @@
                         @change="handleChange"
                     />
                     <BaseInput
-                        :v-model="inputDate"
+                        :modelValue="inputDate"
                         label="Date"
                         type="date"
-                        placeholder="Select date"
+                        required
                         @change="handleChange"
                     />
 
@@ -110,7 +110,7 @@ export default defineComponent({
         const inputEmail = ref('')
         const inputPassword = ref('')
         const inputUrl = ref('')
-        const inputDate = ref('')
+        const inputDate = ref('2022-07-09')
         const inputDisabled = ref()
         const inputSelect = ref('Default Option')
         const inputCheckbox = ref()

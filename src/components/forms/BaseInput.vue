@@ -61,11 +61,11 @@ export default {
     @apply inline-block text-sm text-ao-mid-blue-700 dark:text-slate-400 font-semibold mb-1;
 }
 .cc__form-field {
-    @apply p-2.5 w-full bg-white dark:bg-slate-900 text-ao-dark-blue-500 dark:text-slate-300 font-medium rounded text-sm border-ao-mid-blue-300 
-    dark:border-slate-700 drop-shadow-sm hover:drop-shadow hover:border-ao-mid-blue-400 dark:hover:border-slate-600 focus:outline-none focus:border-transparent 
+    @apply p-2.5 w-full bg-white dark:bg-slate-900 text-ao-dark-blue-500 dark:text-slate-300 font-medium rounded text-sm border border-ao-mid-blue-300 
+    dark:border-slate-700 shadow-sm hover:shadow hover:border-ao-mid-blue-400 dark:hover:border-slate-600 focus:outline-none focus:border-transparent 
     focus:ring-2 dark:focus:ring-1 focus:ring-ao-mid-blue-500 dark:focus:ring-ao-light-blue placeholder:text-ao-dark-blue-400 
     dark:placeholder:text-slate-500 placeholder:font-normal autofill:!text-ao-dark-blue-500 autofill:!bg-white dark:autofill:!bg-slate-800 dark:autofill:!text-slate-300
-    disabled:bg-ao-mid-blue-100 disabled:hover:border-ao-mid-blue-300 dark:disabled:bg-slate-800 dark:disabled:hover:border-slate-700 disabled:hover:drop-shadow-none disabled:drop-shadow-none appearance-none transition-shadow;
+    disabled:bg-ao-mid-blue-100 disabled:hover:border-ao-mid-blue-300 dark:disabled:bg-slate-800 dark:disabled:hover:border-slate-700 disabled:hover:shadow-none disabled:shadow-none appearance-none transition-shadow;
 }
 /* Error style for Input/Text */
 .cc__form-error {
@@ -77,7 +77,7 @@ export default {
 
 /* Select element needs slighly adjusted padding */
 select.cc__form-field {
-    @apply pl-2;
+    @apply pl-2.5;
 }
 
 /* Hide arrows to increment number on Firefox */

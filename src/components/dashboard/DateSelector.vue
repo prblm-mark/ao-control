@@ -13,7 +13,12 @@
         <span
             class="cc__date-selector-h-full row-start-2 col-start-1 col-span-2"
         >
-            <BaseInput :v-model="date" type="date" @change="handleChange" />
+            <BaseInput
+                :modelValue="date"
+                type="date"
+                required
+                @change="handleChange"
+            />
         </span>
 
         <span class="cc__date-selector-h-full row-start-1 col-start-3">
@@ -52,7 +57,7 @@ export default defineComponent({
     setup() {
         const options = ref(['Last 7 Days', 'Last 14 Days', 'Last 30 Days'])
         const duration = ref('Last 7 Days')
-        const date = ref()
+        const date = ref('2022-07-09')
         const compare = ref()
 
         const handleChange = (e) => console.log(e.target.value)
