@@ -48,9 +48,11 @@
             :overviewData="dashboardMainData"
             :listingData="dashboardListingData"
         />
-        <span class="hidden">
-            <DashboardTableGrid />
-        </span>
+        <HeadingBreak :heading="'Dashboard Table [Option 2]'" />
+        <DashboardTableGrid
+            :overviewData="dashboardMainData"
+            :listingData="dashboardListingData"
+        />
     </main>
 </template>
 
@@ -63,9 +65,9 @@ import HeadingBreak from '../components/headings/HeadingBreak.vue'
 import DateSelector from '../components/dashboard/DateSelector.vue'
 import { defineComponent } from '@vue/runtime-core'
 import DashboardTable from '../components/dashboard/DashboardTable.vue'
-import DashboardTableGrid from '../components/dashboard/DashboardTableGrid.vue'
 import dashboardMainData from '@/data/dashboardMainData.json'
 import dashboardListingData from '@/data/dashboardListingData.json'
+import DashboardTableGrid from '../components/dashboard/DashboardTableGrid.vue'
 export default defineComponent({
     setup() {
         return {

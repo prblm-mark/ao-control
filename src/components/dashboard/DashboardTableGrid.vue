@@ -5,106 +5,171 @@
                 <h2 class="cc__h2">Articles</h2>
             </div>
 
+            <div class="cc__card-heading-aside">
+                <a href="#"> <span>View Report</span><IconExport /></a>
+            </div>
+        </div>
+
+        <div class="cc__table-container">
+            <table class="cc__table cc__table-overview">
+                <thead>
+                    <tr>
+                        <th v-for="data in overviewData" :key="data.name">
+                            <h6 class="cc__h6 cc__table-subheading">
+                                {{ data.name }}
+                            </h6>
+                        </th>
+                    </tr>
+                </thead>
+
+                <tbody>
+                    <tr>
+                        <td v-for="data in overviewData" :key="data.name">
+                            <h3 class="cc__h3 cc__table-overview-stat">
+                                <span class="cc__h6 cc__table-subheading">
+                                    {{ data.name }}
+                                </span>
+                                {{ data.stat }}
+                            </h3>
+                            <span class="cc__table-overview-details">
+                                {{ data.detailsTitle }} <br />
+                                {{ data.details }}
+                            </span>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
+        <div class="cc__table-listing">
             <div
-                class="cc__card-heading-aside inline-flex items-center space-x-2 text-ao-mid-blue-600 text-sm font-semibold"
+                class="cc__table-listing-grid"
+                v-for="(data, index) in listingData"
+                :key="index"
             >
-                <span>View Report</span><IconExport />
-            </div>
-        </div>
-
-        <div class="cc__table">
-            <div class="cc__table-body">
-                <div>
-                    <h6 class="cc__h6 cc__table-heading">Page Views</h6>
-                    <div>
-                        <h3 class="cc__h3">190, 685</h3>
-                        <span
-                            class="text-xs block leading-tight text-ao-mid-blue-500"
-                            >% of Total: <br />
-                            100.00% (190, 685)
-                        </span>
-                    </div>
+                <div class="cc__table-listing-main">
+                    <a href="#">{{ data.title }}</a>
+                    <span @click="toggleVisibility($event)">
+                        <IconMore />
+                    </span>
                 </div>
-
-                <div>
-                    <h6 class="cc__h6 cc__table-heading">Unique Page Views</h6>
-                    <div>
-                        <h3 class="cc__h3">162, 985</h3>
-                        <span
-                            class="text-xs block leading-tight text-ao-mid-blue-500"
-                            >% of Total: <br />
-                            100.00% (190, 685)
-                        </span>
-                    </div>
-                </div>
-
-                <div>
-                    <h6 class="cc__h6 cc__table-heading">Page Views</h6>
-                    <div>
-                        <h3 class="cc__h3">190, 685</h3>
-                        <span
-                            class="text-xs block leading-tight text-ao-mid-blue-500"
-                            >% of Total: <br />
-                            100.00% (190, 685)
-                        </span>
-                    </div>
-                </div>
-
-                <div>
-                    <h6 class="cc__h6 cc__table-heading">Unique Page Views</h6>
-                    <div>
-                        <h3 class="cc__h3">162, 985</h3>
-                        <span
-                            class="text-xs block leading-tight text-ao-mid-blue-500"
-                            >% of Total: <br />
-                            100.00% (190, 685)
-                        </span>
-                    </div>
-                </div>
-
-                <div>
-                    <h6 class="cc__h6 cc__table-heading">Page Views</h6>
-                    <div>
-                        <h3 class="cc__h3">190, 685</h3>
-                        <span
-                            class="text-xs block leading-tight text-ao-mid-blue-500"
-                            >% of Total: <br />
-                            100.00% (190, 685)
-                        </span>
-                    </div>
+                <div class="cc__table-listing-details hidden lg:block">
+                    <table class="cc__table">
+                        <tr>
+                            <td v-for="stat in data.stats" :key="stat.name">
+                                <h3 class="cc__h6 cc__table-subheading">
+                                    {{ stat.name }}
+                                </h3>
+                                <b>{{ stat.details }}</b>
+                                {{ stat.detailsPercent }}
+                            </td>
+                        </tr>
+                    </table>
                 </div>
             </div>
         </div>
-        <div class="col-start-1 col-span-full">Listed articles</div>
     </div>
 </template>
 
 <script>
 import { defineComponent } from 'vue'
 import IconExport from '../icons/IconExport.vue'
+import IconMore from '../icons/IconMore.vue'
 
 export default defineComponent({
-    setup() {
-        return {}
+    props: {
+        overviewData: {
+            type: [Array],
+            required: true,
+        },
+        listingData: {
+            type: [Array],
+            required: true,
+        },
     },
-    components: { IconExport },
+    setup() {
+        const toggleVisibility = (e) => {
+            const stat = e.target.closest('div')
+            const statDetails = stat.nextElementSibling
+            statDetails.classList.toggle('hidden')
+        }
+        return { toggleVisibility }
+    },
+    components: { IconExport, IconMore },
 })
 </script>
 
 <style scoped>
+.cc__table-container {
+    @apply grid lg:grid-cols-[minmax(min-content,_300px)_1fr] border-b border-ao-mid-blue-200 dark:border-slate-900 overflow-x-auto;
+}
+/* General table styles */
 .cc__table {
-    @apply grid lg:grid-cols-[minmax(max-content,_300px)_1fr] border-b border-ao-mid-blue-200;
+    @apply table-fixed w-full h-full border-collapse lg:col-start-2;
 }
-.cc__table-heading {
-    @apply text-xs font-bold  border-b border-ao-mid-blue-200 p-3;
+.cc__table thead tr {
+    @apply border-b border-ao-mid-blue-200 dark:border-slate-900;
 }
-.cc__table-body {
-    @apply grid grid-cols-5 auto-cols-[minmax(0,_1fr)] col-start-2;
+.cc__table td,
+.cc__table th {
+    @apply first:border-l-0 lg:first:border-l border-l border-ao-mid-blue-200 dark:border-slate-900 text-left p-3 lg:py-2 align-top;
 }
-.cc__table-body > div {
-    @apply grid auto-rows-[minmax(20px,_auto)] border-l border-ao-mid-blue-200;
+.cc__table-subheading {
+    @apply text-xs font-semibold tracking-normal block;
 }
-.cc__table-body > div > div {
-    @apply row-start-2;
+/* Specifc styles to main stats section at top */
+
+.cc__table-overview thead {
+    @apply hidden lg:table-header-group;
+}
+.cc__table-overview tbody tr,
+.cc__table-listing tr {
+    @apply grid grid-cols-2 lg:table-row;
+}
+.cc__table-overview td,
+.cc__table-listing td {
+    @apply border-b lg:border-b-0 border-l-0 lg:border-l odd:border-r last:border-b-0 border-ao-mid-blue-200 dark:border-slate-900;
+}
+.cc__table-overview-details {
+    @apply text-xs block leading-tight text-ao-mid-blue-500 dark:text-slate-400;
+}
+.cc__table-overview tbody .cc__table-subheading {
+    @apply lg:hidden;
+}
+/* Specifc styles to idividual listing section */
+.cc__table-listing {
+    @apply col-start-1 col-span-full;
+}
+.cc__table-listing-grid {
+    @apply grid lg:grid-cols-[minmax(min-content,_300px)_1fr];
+}
+.cc__table-listing-main {
+    @apply flex items-center col-span-1 p-3 border-b border-ao-mid-blue-200 dark:border-slate-900;
+}
+.cc__table-listing-grid:last-of-type .cc__table-listing-main {
+    @apply lg:border-b-0;
+}
+/* .cc__table-listing-main {
+    @apply bg-ao-mid-blue-100;
+} */
+.cc__table-listing-main a {
+    @apply text-sm font-bold inline-block pr-2 lg:pr-0 hover:text-ao-mid-blue-500 dark:text-slate-300 transition-colors leading-tight line-clamp-2;
+}
+.cc__table-listing-main span {
+    @apply lg:hidden cursor-pointer text-ao-mid-blue-400 hover:text-ao-mid-blue-600 dark:text-slate-600 dark:hover:text-slate-400 transition-colors;
+}
+.cc__table-listing-details {
+    @apply overflow-x-auto;
+}
+.cc__table-listing-details td {
+    @apply text-xs leading-tight text-ao-mid-blue-700 lg:text-ao-mid-blue-500 dark:text-slate-400;
+}
+.cc__table-listing .cc__table-subheading {
+    @apply mb-1 lg:hidden;
+}
+.cc__table-listing td {
+    @apply lg:align-middle;
+}
+.cc__table-listing > div:not(:last-of-type) tr {
+    @apply border-b border-ao-mid-blue-200 dark:border-slate-900;
 }
 </style>
