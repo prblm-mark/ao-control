@@ -112,18 +112,18 @@ export default defineComponent({
 
 <style scoped>
 .cc__table-container {
-    @apply grid lg:grid-cols-dashboard-table-lg xl:grid-cols-dashboard-table border-b border-ao-mid-blue-200 dark:border-slate-900 overflow-x-auto;
+    @apply grid lg:grid-cols-dashboard-table-lg xl:grid-cols-dashboard-table border-b border-ao-mid-blue-200 dark:border-slate-700 overflow-x-auto;
 }
 /* General table styles */
 .cc__table {
     @apply table-fixed w-full h-full border-collapse lg:col-start-2;
 }
 .cc__table thead tr {
-    @apply border-b border-ao-mid-blue-200 dark:border-slate-900;
+    @apply border-b border-ao-mid-blue-200 dark:border-slate-700;
 }
 .cc__table td,
 .cc__table th {
-    @apply first:border-l-0 lg:first:border-l border-l border-ao-mid-blue-200 dark:border-slate-900 text-left p-3 lg:py-2 align-top;
+    @apply first:border-l-0 lg:first:border-l border-l border-ao-mid-blue-200 dark:border-slate-700 text-left p-3 lg:py-2 align-top;
 }
 .cc__table-subheading {
     @apply text-xs font-semibold tracking-normal block;
@@ -139,7 +139,7 @@ export default defineComponent({
 }
 .cc__table-overview td,
 .cc__table-listing td {
-    @apply border-b lg:border-b-0 border-l-0 lg:border-l odd:border-r lg:last:!border-r-0 last:border-b-0 border-ao-mid-blue-200 dark:border-slate-900;
+    @apply border-b lg:border-b-0 border-l-0 lg:border-l odd:border-r lg:last:!border-r-0 last:border-b-0 border-ao-mid-blue-200 dark:border-slate-700;
 }
 .cc__table-overview-details {
     @apply text-xs block leading-tight text-ao-mid-blue-500 dark:text-slate-400;
@@ -155,7 +155,7 @@ export default defineComponent({
     @apply grid lg:grid-cols-dashboard-table-lg xl:grid-cols-dashboard-table;
 }
 .cc__table-listing-main {
-    @apply flex items-center justify-between col-span-1 p-3 border-b border-ao-mid-blue-200 dark:border-slate-900;
+    @apply flex items-center justify-between col-span-1 p-3 border-b border-ao-mid-blue-200 dark:border-slate-700;
 }
 
 .cc__table-listing-grid:last-of-type .cc__table-listing-main {
@@ -186,6 +186,6 @@ export default defineComponent({
     @apply lg:align-middle;
 }
 .cc__table-listing > div:not(:last-of-type) tr {
-    @apply border-b border-ao-mid-blue-200 dark:border-slate-900;
+    @apply border-b border-ao-mid-blue-200 dark:border-slate-700;
 }
 </style>

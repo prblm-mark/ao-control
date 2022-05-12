@@ -94,18 +94,18 @@ export default defineComponent({
 
 <style scoped>
 .cc__table-container {
-    @apply grid lg:grid-cols-dashboard-table-lg xl:grid-cols-dashboard-table border-b border-ao-mid-blue-200 dark:border-slate-900 overflow-x-auto;
+    @apply grid lg:grid-cols-dashboard-table-lg xl:grid-cols-dashboard-table border-b border-ao-mid-blue-200 dark:border-slate-700 overflow-x-auto;
 }
 /* General table styles */
 .cc__table {
     @apply table-fixed w-[200%] sm:w-full h-full border-collapse lg:col-start-2;
 }
 .cc__table thead tr {
-    @apply border-b border-ao-mid-blue-200 dark:border-slate-900;
+    @apply border-b border-ao-mid-blue-200 dark:border-slate-700;
 }
 .cc__table td,
 .cc__table th {
-    @apply first:border-l-0 lg:first:border-l border-l border-ao-mid-blue-200 dark:border-slate-900 text-left p-3 lg:py-2 align-top;
+    @apply first:border-l-0 lg:first:border-l border-l border-ao-mid-blue-200 dark:border-slate-700 text-left p-3 lg:py-2 align-top;
 }
 .cc__table-subheading {
     @apply text-xs font-semibold;
@@ -122,7 +122,7 @@ export default defineComponent({
     @apply grid lg:grid-cols-dashboard-table-lg xl:grid-cols-dashboard-table;
 }
 .cc__table-listing-main {
-    @apply col-span-1 p-3 border-b border-ao-mid-blue-200 dark:border-slate-900;
+    @apply col-span-1 p-3 border-b border-ao-mid-blue-200 dark:border-slate-700;
 }
 .cc__table-listing-main > div {
     @apply inline-flex;
@@ -149,6 +149,6 @@ export default defineComponent({
     @apply lg:align-middle;
 }
 .cc__table-listing > div:not(:last-of-type) tr {
-    @apply border-b border-ao-mid-blue-200 dark:border-slate-900;
+    @apply border-b border-ao-mid-blue-200 dark:border-slate-700;
 }
 </style>
