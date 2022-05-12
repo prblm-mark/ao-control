@@ -1,7 +1,7 @@
 <template>
     <header>
         <div>
-            <LogoType />
+            <router-link to="/"><LogoType /></router-link>
 
             <p>Control Center Design System V1.0</p>
 

@@ -21,7 +21,7 @@ export default {
             required: true,
         },
         name: {
-            type: String,
+            type: Number,
             required: true,
         },
         modelValue: {

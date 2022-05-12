@@ -4,6 +4,10 @@
         <p>
             Form element types are a key to the control center, and therefore
             there are lots of states and variations to consider.
+            <br /><b class="text-sm pt-2 block"
+                >Note: The date input will be using a js solution for the picker
+                itself</b
+            >
         </p>
         <div class="cc__card">
             <div class="cc__card-heading">
@@ -58,7 +62,6 @@
                         required
                         @change="handleChange"
                     />
-
                     <BaseInput
                         :v-model="inputDisabled"
                         label="Disabled"
@@ -116,7 +119,7 @@ export default defineComponent({
         const inputCheckbox = ref()
         const inputRadio = ref()
         const error = ref('')
-        const share = ref('1')
+        const share = ref(1)
         const shareOptions = ref([
             { label: 'Yes', value: 1 },
             { label: 'No', value: 0 },

@@ -162,7 +162,7 @@ export default defineComponent({
     @apply lg:border-b-0;
 }
 .cc__table-listing-main a {
-    @apply text-sm font-bold inline-block pr-3 md:pr-4 lg:pr-0 hover:text-ao-mid-blue-500 dark:text-slate-300 transition-colors leading-tight line-clamp-2;
+    @apply text-sm font-bold inline-block pr-3 md:pr-4 lg:pr-0 hover:text-ao-mid-blue-500 dark:text-slate-300 dark:hover:text-slate-400 transition-colors leading-tight line-clamp-2;
 }
 .cc__table-listing-main > div {
     @apply inline-flex;

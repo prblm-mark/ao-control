@@ -79,7 +79,7 @@
         @apply flex items-center justify-between p-3 md:px-5 md:py-4 border-b border-ao-mid-blue-200 dark:border-slate-900;
     }
     .cc__card-heading-aside a {
-        @apply inline-flex items-center space-x-2 text-ao-mid-blue-600 text-xs lg:text-sm font-semibold hover:text-ao-dark-blue-600 dark:text-slate-400 transition-colors;
+        @apply inline-flex items-center space-x-2 text-ao-mid-blue-600 text-xs lg:text-sm font-semibold hover:text-ao-dark-blue-600 dark:text-slate-400 dark:hover:text-slate-300 transition-colors;
     }
     .cc__card-no-border {
         @apply border-0 pb-0;
