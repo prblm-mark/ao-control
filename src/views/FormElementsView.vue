@@ -1,21 +1,55 @@
+<script setup>
+import { ref } from 'vue'
+import BaseInput from '@/components/forms/BaseInput.vue'
+import formSelectOptions from '@/data/formSelectOptions.json'
+import BaseSelect from '../components/forms/BaseSelect.vue'
+import BaseCheckbox from '../components/forms/BaseCheckbox.vue'
+import BaseRadioGroup from '@/components/forms/BaseRadioGroup.vue'
+import SystemHeading from '@/components/system/SystemHeading.vue'
+import SystemDescription from '@/components/system/SystemDescription.vue'
+import CardElement from '../components/cards/CardElement.vue'
+
+const inputText = ref('')
+const inputNumber = ref('')
+const inputEmail = ref('')
+const inputPassword = ref('')
+const inputUrl = ref('')
+const inputDate = ref('2022-07-09')
+const inputDisabled = ref()
+const inputSelect = ref('Default Option')
+const inputCheckbox = ref()
+const inputRadio = ref(1)
+const error = ref('')
+const radioOptions = ref([
+    { label: 'Yes', value: 1 },
+    { label: 'No', value: 0 },
+])
+
+const handleChange = (e) => {
+    // Create a dummy error if 'error' is typed
+    const result = e.target.value
+    result.toLowerCase()
+    result === 'error'
+        ? (error.value = 'This is some error text')
+        : (error.value = '')
+}
+</script>
 <template>
     <main class="system-content">
-        <h2 class="system-heading">Form Elements</h2>
-        <p>
+        <SystemHeading>Form Elements</SystemHeading>
+        <SystemDescription>
             Form element types are a key to the control center, and therefore
             there are lots of states and variations to consider.
-            <br /><b class="text-sm pt-2 block"
-                >Note: The date input will be using a js solution for the picker
-                itself</b
-            >
-        </p>
-        <div class="cc__card">
-            <div class="cc__card-heading">
-                <div>
-                    <h2 class="cc__h2">Basic</h2>
-                </div>
-            </div>
-            <div class="cc__card-content">
+            <br />
+            <b class="text-sm pt-2 block">
+                Note: The date input will be using a js solution for the picker
+                itself
+            </b>
+        </SystemDescription>
+
+        <CardElement>
+            <template #heading> Basic </template>
+            <template #content>
                 <form
                     class="grid sm:grid-cols-2 md:grid-cols-2 xl:grid-cols-3 gap-4 md:gap-6 items-end"
                 >
@@ -81,78 +115,12 @@
                         label="Checkbox"
                     />
                     <BaseRadioGroup
-                        :modelValue="share"
-                        :options="shareOptions"
-                        :name="share"
+                        :modelValue="inputRadio"
+                        :options="radioOptions"
+                        :name="inputRadio"
                     />
                 </form>
-            </div>
-        </div>
+            </template>
+        </CardElement>
     </main>
 </template>
-
-<script>
-import { defineComponent, ref } from 'vue'
-import BaseInput from '@/components/forms/BaseInput.vue'
-import formSelectOptions from '@/data/formSelectOptions.json'
-import BaseSelect from '../components/forms/BaseSelect.vue'
-import BaseCheckbox from '../components/forms/BaseCheckbox.vue'
-import BaseRadioGroup from '@/components/forms/BaseRadioGroup.vue'
-
-export default defineComponent({
-    components: {
-        BaseInput,
-        BaseSelect,
-        BaseCheckbox,
-        BaseRadioGroup,
-    },
-
-    setup() {
-        const inputText = ref('')
-        const inputNumber = ref('')
-        const inputEmail = ref('')
-        const inputPassword = ref('')
-        const inputUrl = ref('')
-        const inputDate = ref('2022-07-09')
-        const inputDisabled = ref()
-        const inputSelect = ref('Default Option')
-        const inputCheckbox = ref()
-        const inputRadio = ref()
-        const error = ref('')
-        const share = ref(1)
-        const shareOptions = ref([
-            { label: 'Yes', value: 1 },
-            { label: 'No', value: 0 },
-        ])
-
-        const handleChange = (e) => {
-            // Create a dummy error if 'error' is typed
-            const result = e.target.value
-            result.toLowerCase()
-            result === 'error'
-                ? (error.value = 'This is some error text')
-                : (error.value = '')
-        }
-
-        return {
-            inputText,
-            inputNumber,
-            inputEmail,
-            inputPassword,
-            inputUrl,
-            inputDate,
-            handleChange,
-            inputDisabled,
-            inputSelect,
-            formSelectOptions,
-            error,
-            inputCheckbox,
-            inputRadio,
-            share,
-            shareOptions,
-        }
-    },
-})
-</script>
-
-<style></style>

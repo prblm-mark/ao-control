@@ -26,37 +26,11 @@
     .system-content {
         @apply w-full md:ml-72 pt-6 md:pt-0;
     }
-    .system-heading {
-        @apply text-ao-mid-blue-700 dark:text-slate-200 leading-tight tracking-tight font-extrabold text-2xl mb-1.5 ;
-    }
-    .system-heading:not(:first-of-type) {
-        @apply border-t border-ao-mid-blue-300 dark:border-slate-800 pt-8;
-    }
-    .system-content > p {
-        @apply text-ao-mid-blue-600 dark:text-slate-400 text-sm md:text-base mb-6;
-    }
-    .system-content > p a {
-        @apply font-bold underline decoration-2 underline-offset-4 text-ao-mid-blue-700 dark:text-slate-200 transition-all;
-    }
-    .system-content > p a:hover {
-        @apply text-ao-light-blue;
-    }
-    .system-panel {
-        @apply bg-white dark:bg-slate-800 shadow-md rounded-lg mb-12 p-4 sm:p-6 lg:p-8;
-    }
-    .system-description {
-        @apply text-ao-mid-blue-600 dark:text-slate-400 border-b border-dotted border-ao-mid-blue-400 dark:border-slate-500 text-xs md:text-sm mt-4 mb-6 pb-4;
-    }
-
-
 
     /* -------------------------------------------------------------------------- */
     /*                    Control Center - Heading & Container                    */
     /* -------------------------------------------------------------------------- */
 
-    .cc__h1-freestanding {
-        @apply text-ao-mid-blue-700 dark:text-slate-200 text-2xl md:text-3xl font-extrabold tracking-tight;
-    }
     .cc__h1 {
         @apply text-ao-mid-blue-700 dark:text-slate-200 text-xl md:text-2xl font-extrabold tracking-tight;
     }
@@ -78,8 +52,11 @@
     .cc__card-heading {
         @apply flex items-center justify-between p-3 md:px-5 md:py-4 border-b border-ao-mid-blue-200 dark:border-slate-700;
     }
+    .cc__card-heading-aside {
+        @apply grid-flow-col grid gap-2;
+    }
     .cc__card-heading-aside a {
-        @apply inline-flex items-center space-x-2 text-ao-mid-blue-600 text-xs lg:text-sm font-semibold hover:text-ao-dark-blue-600 dark:text-slate-400 dark:hover:text-slate-300 transition-colors;
+        @apply inline-flex space-x-2 items-center text-ao-mid-blue-600 text-xs lg:text-sm font-semibold hover:text-ao-dark-blue-600 dark:text-slate-400 dark:hover:text-slate-300 transition-colors;
     }
     .cc__card-no-border {
         @apply border-0 pb-0;

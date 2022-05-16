@@ -1,41 +1,39 @@
-<template>
-    <div :style="swatchColour" class="swatch-colour"></div>
-    <p class="swatch-reference">
-        <span>{{ swatchNumber }}</span>
-        {{ swatchReference }}
-    </p>
-</template>
-
-<script>
+<script setup>
 import { computed } from 'vue'
-export default {
-    props: {
-        swatchReference: {
-            type: String,
-            required: true,
-            default: '',
-        },
-        index: {
-            type: Number,
-            required: true,
-            default: 0,
-        },
-    },
-    setup(props) {
-        const swatchColour = computed(() => {
-            return `background-color: ${props.swatchReference}`
-        })
 
-        const swatchNumber = computed(() => {
-            if (props.index < 6) return `${props.index + 1}00`
-            if (props.index > 6) return `${props.index}00`
-            return 'Main'
-        })
-
-        return { swatchColour, swatchNumber }
+const props = defineProps({
+    swatchReference: {
+        type: String,
+        required: true,
+        default: '',
     },
-}
+    index: {
+        type: Number,
+        required: true,
+        default: 0,
+    },
+})
+
+const swatchColour = computed(() => {
+    return `background-color: ${props.swatchReference}`
+})
+
+const swatchNumber = computed(() => {
+    if (props.index < 6) return `${props.index + 1}00`
+    if (props.index > 6) return `${props.index}00`
+    return 'Main'
+})
 </script>
+
+<template>
+    <div>
+        <div :style="swatchColour" class="swatch-colour"></div>
+        <p class="swatch-reference">
+            <span>{{ swatchNumber }}</span>
+            {{ swatchReference }}
+        </p>
+    </div>
+</template>
 
 <style scoped>
 .swatch-colour {

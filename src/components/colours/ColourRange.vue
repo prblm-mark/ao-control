@@ -1,44 +1,38 @@
+<script setup>
+import { computed } from '@vue/runtime-core'
+import ColourSwatch from './ColourSwatch.vue'
+import { useModeStore } from '@/store/ModeStore'
+
+const props = defineProps({
+    colourRange: {
+        type: Object,
+        required: true,
+    },
+})
+
+const ModeStore = useModeStore()
+
+const hideRange = computed(() => {
+    if (!ModeStore.darkMode && props.colourRange.darkTheme === true)
+        return `display: none;`
+    if (ModeStore.darkMode && props.colourRange.darkTheme === false)
+        return `display: none;`
+})
+</script>
 <template>
     <div class="colour-range" :style="hideRange">
         <div class="colour-range-title">
             {{ colourRange.name }}
         </div>
-        <div
+
+        <ColourSwatch
             v-for="(reference, index) in colourRange.references"
             :key="reference"
-        >
-            <ColourSwatch :swatchReference="reference" :index="index" />
-        </div>
+            :swatchReference="reference"
+            :index="index"
+        />
     </div>
 </template>
-
-<script>
-import { computed } from '@vue/runtime-core'
-import ColourSwatch from './ColourSwatch.vue'
-import { useModeStore } from '@/store/ModeStore'
-export default {
-    components: { ColourSwatch },
-
-    props: {
-        colourRange: {
-            type: Object,
-            required: true,
-        },
-    },
-
-    setup(props) {
-        const ModeStore = useModeStore()
-
-        const hideRange = computed(() => {
-            if (!ModeStore.darkMode && props.colourRange.darkTheme === true)
-                return `display: none;`
-            if (ModeStore.darkMode && props.colourRange.darkTheme === false)
-                return `display: none;`
-        })
-        return { hideRange }
-    },
-}
-</script>
 
 <style scoped>
 .colour-range {

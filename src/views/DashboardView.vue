@@ -1,9 +1,32 @@
+<script setup>
+import StatCard from '../components/dashboard/StatCard.vue'
+import IconClipboard from '../components/icons/IconClipboard.vue'
+import IconDocumentation from '../components/icons/IconDocumentation.vue'
+import IconFilter from '../components/icons/IconFilter.vue'
+import HeadingBreak from '../components/headings/HeadingBreak.vue'
+import DateSelector from '../components/dashboard/DateSelector.vue'
+import DashboardTable from '../components/dashboard/DashboardTable.vue'
+import dashboardMainData from '@/data/dashboardMainData.json'
+import dashboardListingData from '@/data/dashboardListingData.json'
+import DashboardTableGrid from '../components/dashboard/DashboardTableGrid.vue'
+import SecondaryButton from '../components/buttons/SecondaryButton.vue'
+import IconClose from '../components/icons/IconClose.vue'
+import SystemHeading from '@/components/system/SystemHeading.vue'
+import SystemDescription from '@/components/system/SystemDescription.vue'
+
+const toggleVisibility = () => {
+    document.documentElement.classList.toggle('visible')
+}
+</script>
+
 <template>
     <main class="system-content">
-        <h2 class="system-heading">Dashboard Elements</h2>
-        <p>Here are some of the initial elements require for the Dashboard</p>
+        <SystemHeading>Dashboard Elements</SystemHeading>
+        <SystemDescription>
+            Here are some of the initial elements require for the Dashboard
+        </SystemDescription>
 
-        <HeadingBreak :heading="'Statistic Cards'" />
+        <HeadingBreak>Statistic Cards</HeadingBreak>
 
         <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
             <StatCard :status="'up'">
@@ -34,34 +57,34 @@
             </StatCard>
         </div>
 
-        <HeadingBreak :heading="'Date Selector'" />
+        <HeadingBreak>Date Selector</HeadingBreak>
         <div class="md:gap-6 mb-12">
             <DateSelector />
         </div>
 
-        <h2 class="system-heading">Dashboard Table Options</h2>
-        <p>
+        <SystemHeading>Dashboard Table Options</SystemHeading>
+        <SystemDescription>
             These tables have been designed to be full width, as they will
             feature within the Dashboard screen. As the tables below are being
             displayed in a limited space due to this reference screen having a
             fixed left column menu on desktop, they are best viewed in full
             screen mode at this viewport.
             <br />
-            <b class="text-sm pt-2 block"
-                >Tip: Toggle the theme color before viewing</b
-            >
-        </p>
+            <b class="text-sm pt-2 block">
+                Tip: Toggle the theme color before viewing
+            </b>
+        </SystemDescription>
         <span class="mb-12 block" @click="toggleVisibility">
-            <SecondaryButton label="Full Screen View" />
+            <SecondaryButton>Full Screen View</SecondaryButton>
         </span>
 
-        <HeadingBreak :heading="'Table [Option 1]'" />
+        <HeadingBreak>Table [Option 1]</HeadingBreak>
         <DashboardTableGrid
             :overviewData="dashboardMainData"
             :listingData="dashboardListingData"
         />
 
-        <HeadingBreak :heading="'Table [Option 2]'" />
+        <HeadingBreak>Table [Option 2]</HeadingBreak>
         <DashboardTable
             :overviewData="dashboardMainData"
             :listingData="dashboardListingData"
@@ -73,13 +96,13 @@
             </span>
 
             <div class="max-w-[1280px]">
-                <HeadingBreak :heading="'Table [Option 1]'" />
+                <HeadingBreak>Table [Option 1]</HeadingBreak>
                 <DashboardTableGrid
                     :overviewData="dashboardMainData"
                     :listingData="dashboardListingData"
                 />
 
-                <HeadingBreak :heading="'Table [Option 2]'" />
+                <HeadingBreak>Table [Option 2]</HeadingBreak>
                 <DashboardTable
                     :overviewData="dashboardMainData"
                     :listingData="dashboardListingData"
@@ -88,53 +111,6 @@
         </div>
     </main>
 </template>
-
-<script>
-import StatCard from '../components/dashboard/StatCard.vue'
-import IconClipboard from '../components/icons/IconClipboard.vue'
-import IconDocumentation from '../components/icons/IconDocumentation.vue'
-import IconFilter from '../components/icons/IconFilter.vue'
-import HeadingBreak from '../components/headings/HeadingBreak.vue'
-import DateSelector from '../components/dashboard/DateSelector.vue'
-import { defineComponent } from '@vue/runtime-core'
-import DashboardTable from '../components/dashboard/DashboardTable.vue'
-import dashboardMainData from '@/data/dashboardMainData.json'
-import dashboardListingData from '@/data/dashboardListingData.json'
-import DashboardTableGrid from '../components/dashboard/DashboardTableGrid.vue'
-import SecondaryButton from '../components/buttons/SecondaryButton.vue'
-import IconClose from '../components/icons/IconClose.vue'
-export default defineComponent({
-    setup() {
-        const toggleVisibility = () => {
-            document.documentElement.classList.toggle('visible')
-        }
-
-        return {
-            StatCard,
-            IconClipboard,
-            IconDocumentation,
-            IconFilter,
-            HeadingBreak,
-            DateSelector,
-            dashboardMainData,
-            dashboardListingData,
-            toggleVisibility,
-        }
-    },
-    components: {
-        StatCard,
-        IconClipboard,
-        IconDocumentation,
-        IconFilter,
-        HeadingBreak,
-        DateSelector,
-        DashboardTable,
-        DashboardTableGrid,
-        SecondaryButton,
-        IconClose,
-    },
-})
-</script>
 
 <style scoped>
 /* Just temp styles for reference screens */

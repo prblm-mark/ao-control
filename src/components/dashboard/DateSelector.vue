@@ -22,11 +22,11 @@
         </span>
 
         <span class="cc__date-selector-h-full row-start-1 col-start-3">
-            <PrimaryButton label="Apply" :full="true" />
+            <PrimaryButton full> Apply </PrimaryButton>
         </span>
 
         <span class="cc__date-selector-h-full row-start-2 col-start-3">
-            <SecondaryButton label="Clear" :full="true" />
+            <SecondaryButton full>Clear</SecondaryButton>
         </span>
 
         <span class="col-start-1 col-span-full mt-2">
