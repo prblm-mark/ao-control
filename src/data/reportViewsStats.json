@@ -1,0 +1,18 @@
+[
+    {
+        "title": "Impressions",
+        "stat": "52",
+        "icon": "IconClick"
+    },
+    {
+        "title": "Consumed",
+        "stat": "44",
+        "icon": "IconBook"
+    },
+    {
+        "title": "Bookmarked",
+        "stat": "12",
+        "icon": "IconBookmarked"
+    }
+
+]

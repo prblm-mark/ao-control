@@ -1,0 +1,27 @@
+[
+    {
+        "title": "Total Members",
+        "stat": "52",
+        "icon": "IconTotalMembers"
+    },
+    {
+        "title": "Total Active Members",
+        "stat": "44",
+        "icon": "IconTotalActive"
+    },
+    {
+        "title": "% Active Members",
+        "stat": "84.62%",
+        "icon": "IconPercentActive"
+    },
+    {
+        "title": "Total Points",
+        "stat": "154,401",
+        "icon": "IconTotalPoints"
+    },
+    {
+        "title": "Total Logins",
+        "stat": "1,278",
+        "icon": "IconLogin"
+    }
+]

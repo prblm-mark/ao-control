@@ -54,7 +54,7 @@ import SystemDescription from '@/components/system/SystemDescription.vue'
             <template #heading> Heading 2 </template>
             <template #subheading> Heading 6</template>
             <template #aside>
-                <PrimaryButton icon>
+                <PrimaryButton>
                     <template #icon> <IconClipboard /> </template>
                     Copy
                 </PrimaryButton>

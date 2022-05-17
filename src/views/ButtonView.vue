@@ -25,14 +25,14 @@ import CardElement from '../components/cards/CardElement.vue'
                 >
                     <PrimaryButton>Auto Width </PrimaryButton>
 
-                    <PrimaryButton icon>
+                    <PrimaryButton>
                         <template #icon>
                             <IconClipboard />
                         </template>
                         With Icon
                     </PrimaryButton>
 
-                    <PrimaryButton icon>
+                    <PrimaryButton>
                         <template #icon>
                             <IconProcessing />
                         </template>
@@ -52,7 +52,7 @@ import CardElement from '../components/cards/CardElement.vue'
                 >
                     <SecondaryButton>Auto Width</SecondaryButton>
 
-                    <SecondaryButton icon>
+                    <SecondaryButton>
                         <template #icon>
                             <IconClipboard />
                         </template>
@@ -77,7 +77,7 @@ import CardElement from '../components/cards/CardElement.vue'
             <template #aside>
                 <SecondaryButton>Cancel</SecondaryButton>
 
-                <PrimaryButton icon>
+                <PrimaryButton>
                     <template #icon>
                         <IconFilter />
                     </template>
@@ -95,7 +95,7 @@ import CardElement from '../components/cards/CardElement.vue'
         <div class="grid grid-cols-2 gap-2 mb-20">
             <SecondaryButton>Cancel</SecondaryButton>
 
-            <PrimaryButton icon>
+            <PrimaryButton>
                 <template #icon>
                     <IconFilter />
                 </template>

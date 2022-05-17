@@ -38,6 +38,11 @@ const router = createRouter({
             name: 'dashboard',
             component: () => import('../views/DashboardView.vue'),
         },
+        {
+            path: '/engagement-report',
+            name: 'engagement-report',
+            component: () => import('../views/EngagementReportView.vue'),
+        },
     ],
 })
 

@@ -12,6 +12,7 @@
             <RouterLink to="/buttons">Buttons</RouterLink>
             <RouterLink to="/form-elements">Form Elements</RouterLink>
             <RouterLink to="/dashboard">Dashboard</RouterLink>
+            <RouterLink to="/engagement-report">Engagement Report</RouterLink>
         </menu>
     </nav>
 </template>

@@ -1,10 +1,5 @@
 <script setup>
 defineProps({
-    icon: {
-        type: Boolean,
-        required: false,
-        default: false,
-    },
     full: {
         type: Boolean,
         required: false,
@@ -15,7 +10,9 @@ defineProps({
 
 <template>
     <button class="cc__btn-primary" :class="{ 'w-full': full }">
-        <span v-if="icon" class="cc__btn-icon"><slot name="icon" /></span>
+        <span v-if="$slots.icon" class="cc__btn-icon">
+            <slot name="icon" />
+        </span>
         <slot />
     </button>
 </template>

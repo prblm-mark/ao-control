@@ -28,7 +28,7 @@ const toggleVisibility = () => {
 
         <HeadingBreak>Statistic Cards</HeadingBreak>
 
-        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 md:gap-6 mb-12">
+        <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12">
             <StatCard :status="'up'">
                 <template #title> Users </template>
                 <template #icon>

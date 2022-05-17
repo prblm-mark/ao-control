@@ -1,13 +1,25 @@
+<script setup>
+import IconStatUp from '../icons/IconStatUp.vue'
+import IconStatDown from '../icons/IconStatDown.vue'
+
+defineProps({
+    status: {
+        type: String,
+        required: false,
+    },
+})
+</script>
+
 <template>
     <div class="cc__stat-card">
         <div class="cc__stat-card-icon"><slot name="icon" /></div>
         <div>
             <h6 class="cc__h6"><slot name="title" /></h6>
             <h3 class="cc__h3" :class="status">
-                <span v-if="status === 'up'">
+                <span v-if="status && status === 'up'">
                     <IconStatUp />
                 </span>
-                <span v-else>
+                <span v-if="status && status === 'down'">
                     <IconStatDown />
                 </span>
                 <slot name="stat" />
@@ -16,23 +28,6 @@
         </div>
     </div>
 </template>
-
-<script>
-import IconStatUp from '../icons/IconStatUp.vue'
-import IconStatDown from '../icons/IconStatDown.vue'
-export default {
-    props: {
-        status: {
-            type: String,
-            required: true,
-        },
-    },
-    setup() {
-        return {}
-    },
-    components: { IconStatUp, IconStatDown },
-}
-</script>
 
 <style scoped>
 .cc__stat-card {
