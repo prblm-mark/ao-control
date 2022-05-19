@@ -8,6 +8,9 @@ import reportMemberStats from '@/data/reportMemberStats.json'
 import reportViewsStats from '@/data/reportViewsStats.json'
 import IconAnnotation from '@/components/icons/IconAnnotation.vue'
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
+import InterestsStats from '../components/report/InterestsStats.vue'
+import ReportTable from '../components/report/ReportTable.vue'
+import reportTopUsers from '@/data/reportTopUsers.json'
 </script>
 
 <template>
@@ -34,22 +37,27 @@ import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
         <HeadingBreak>Members</HeadingBreak>
         <ReportStats :stats="reportMemberStats" />
 
-        <HeadingBreak>Top 10 Users</HeadingBreak>
-        <CardElement no-header>
-            <template #content> Table goes here </template>
+        <HeadingBreak margin-top>Top 10 Users</HeadingBreak>
+        <CardElement no-header margin-sm>
+            <ReportTable :table-data="reportTopUsers" />
         </CardElement>
         <SecondaryButton>
             Comment
             <template #icon> <IconAnnotation /> </template>
         </SecondaryButton>
 
-        <HeadingBreak>Display Views</HeadingBreak>
+        <HeadingBreak margin-top>Display Views</HeadingBreak>
         <ReportStats :stats="reportViewsStats" />
-        <CardElement no-header>
+        <CardElement no-header margin-sm>
             <template #content> Chart goes here </template>
         </CardElement>
+        <SecondaryButton>
+            Comment
+            <template #icon> <IconAnnotation /> </template>
+        </SecondaryButton>
 
-        <HeadingBreak>Top 10 Interests</HeadingBreak>
+        <HeadingBreak margin-top>Top 10 Interests</HeadingBreak>
+        <InterestsStats />
     </main>
 </template>
 

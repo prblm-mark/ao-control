@@ -31,10 +31,10 @@ defineProps({
 
 <style scoped>
 .cc__stat-card {
-    @apply grid grid-cols-[64px_minmax(150px,_1fr)] gap-4 items-center bg-white dark:bg-slate-800 shadow rounded-md p-3 md:p-4 hover:shadow-md transition-shadow;
+    @apply grid grid-cols-[64px_1fr] gap-4 items-center bg-white dark:bg-slate-800 shadow rounded-md p-3 md:p-4 hover:shadow-md transition-shadow;
 }
 .cc__stat-card * {
-    @apply leading-none;
+    @apply leading-tight;
 }
 .cc__stat-card-icon {
     @apply bg-ao-teal-600 text-white dark:text-slate-200 rounded flex items-center justify-center h-16;

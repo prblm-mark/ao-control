@@ -1,6 +1,6 @@
 <script setup></script>
 <template>
-    <div class="cc__card-content">
-        <slot>Some content</slot>
+    <div v-if="$slots.content" class="cc__card-content">
+        <slot name="content"></slot>
     </div>
 </template>

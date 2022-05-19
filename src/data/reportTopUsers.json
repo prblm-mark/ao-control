@@ -1,0 +1,225 @@
+{
+    "labels": ["Users", "Logins", "Page views", "Downloads", "Points"],
+    "data": [
+        {
+            "avatar": "https://source.unsplash.com/ZHvM3XIOHoE",
+            "user": "Siv Ananthakumar",
+            "stats": [
+                {
+                    "name": "Logins",
+                    "value": 211
+                },
+                {
+                    "name": "Page views",
+                    "value": 189
+                },
+                {
+                    "name": "Downloads",
+                    "value": 6
+                },
+                {
+                    "name": "Points",
+                    "value": 12678
+                }
+            ]
+        },
+        {
+            "avatar": "https://source.unsplash.com/jzz_3jWMzHA",
+            "user": "Karolyne Ugnis",
+            "stats": [
+                {
+                    "name": "Logins",
+                    "value": 189
+                },
+                {
+                    "name": "Page views",
+                    "value": 156
+                },
+                {
+                    "name": "Downloads",
+                    "value": 9
+                },
+                {
+                    "name": "Points",
+                    "value": 11608
+                }
+            ]
+        },
+        {
+            "avatar": "https://source.unsplash.com/MTZTGvDsHFY",
+            "user": "Francis Mullins",
+            "stats": [
+                {
+                    "name": "Logins",
+                    "value": 209
+                },
+                {
+                    "name": "Page views",
+                    "value": 150
+                },
+                {
+                    "name": "Downloads",
+                    "value": 2
+                },
+                {
+                    "name": "Points",
+                    "value": 10449
+                }
+            ]
+        },
+        {
+            "avatar": "https://source.unsplash.com/IF9TK5Uy-KI",
+            "user": "Ashley Schneider",
+            "stats": [
+                {
+                    "name": "Logins",
+                    "value": 190
+                },
+                {
+                    "name": "Page views",
+                    "value": 167
+                },
+                {
+                    "name": "Downloads",
+                    "value": 5
+                },
+                {
+                    "name": "Points",
+                    "value": 10392
+                }
+            ]
+        },
+        {
+            "avatar": "https://source.unsplash.com/iEEBWgY_6lA",
+            "user": "Seth Farmer",
+            "stats": [
+                {
+                    "name": "Logins",
+                    "value": 182
+                },
+                {
+                    "name": "Page views",
+                    "value": 169
+                },
+                {
+                    "name": "Downloads",
+                    "value": 0
+                },
+                {
+                    "name": "Points",
+                    "value": 10222
+                }
+            ]
+        },
+        {
+            "avatar": "https://source.unsplash.com/TACdQo62To0",
+            "user": "Mona Fernandez",
+            "stats": [
+                {
+                    "name": "Logins",
+                    "value": 175
+                },
+                {
+                    "name": "Page views",
+                    "value": 159
+                },
+                {
+                    "name": "Downloads",
+                    "value": 2
+                },
+                {
+                    "name": "Points",
+                    "value": 10108
+                }
+            ]
+        },
+        {
+            "avatar": "https://source.unsplash.com/MZf0mI14RI0",
+            "user": "Julius Metyko",
+            "stats": [
+                {
+                    "name": "Logins",
+                    "value": 166
+                },
+                {
+                    "name": "Page views",
+                    "value": 147
+                },
+                {
+                    "name": "Downloads",
+                    "value": 3
+                },
+                {
+                    "name": "Points",
+                    "value": 10005
+                }
+            ]
+        },
+        {
+            "avatar": "https://source.unsplash.com/2EdIX-O2lkI",
+            "user": "Susan Kerrigan",
+            "stats": [
+                {
+                    "name": "Logins",
+                    "value": 154
+                },
+                {
+                    "name": "Page views",
+                    "value": 134
+                },
+                {
+                    "name": "Downloads",
+                    "value": 5
+                },
+                {
+                    "name": "Points",
+                    "value": 9803
+                }
+            ]
+        },
+        {
+            "avatar": "https://source.unsplash.com/0J9l9xRyMSo",
+            "user": "James Harley",
+            "stats": [
+                {
+                    "name": "Logins",
+                    "value": 131
+                },
+                {
+                    "name": "Page views",
+                    "value": 137
+                },
+                {
+                    "name": "Downloads",
+                    "value": 0
+                },
+                {
+                    "name": "Points",
+                    "value": 9771
+                }
+            ]
+        },
+        {
+            "avatar": "https://source.unsplash.com/6qf1uljGpU4",
+            "user": "Marilyn Morales",
+            "stats": [
+                {
+                    "name": "Logins",
+                    "value": 127
+                },
+                {
+                    "name": "Page views",
+                    "value": 107
+                },
+                {
+                    "name": "Downloads",
+                    "value": 10
+                },
+                {
+                    "name": "Points",
+                    "value": 9457
+                }
+            ]
+        }
+    ]
+}

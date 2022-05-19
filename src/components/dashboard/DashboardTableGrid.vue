@@ -67,9 +67,9 @@
                     <table class="cc__table">
                         <tr>
                             <td v-for="stat in data.stats" :key="stat.name">
-                                <h3 class="cc__h6 cc__table-subheading">
+                                <h6 class="cc__h6 cc__table-subheading">
                                     {{ stat.name }}
-                                </h3>
+                                </h6>
 
                                 <b>{{ stat.details }}</b>
                                 {{ stat.detailsPercent }}

@@ -1,7 +1,9 @@
 <script setup>
 import CardHeader from '@/components/cards/CardHeader.vue'
-import CardContent from './CardContent.vue'
-defineProps({
+import CardContent from '@/components/cards/CardContent.vue'
+import { computed } from '@vue/runtime-core'
+
+const props = defineProps({
     noBorder: {
         type: Boolean,
         required: false,
@@ -11,11 +13,28 @@ defineProps({
         type: Boolean,
         required: false,
     },
+    margin0: {
+        type: Boolean,
+        required: false,
+    },
+    marginSm: {
+        type: Boolean,
+        required: false,
+    },
+})
+const margin = computed(() => {
+    if (props.marginSm) {
+        return 'margin-sm'
+    } else if (props.margin0) {
+        return 'margin-0'
+    }
+    return
 })
 </script>
 
 <template>
-    <div class="cc__card">
+    <div class="cc__card" :class="margin">
+        <slot />
         <CardHeader :no-header="noHeader" :no-border="noBorder">
             <template #heading> <slot name="heading"></slot> </template>
             <template #secondaryheading>
@@ -24,6 +43,10 @@ defineProps({
             <template #subheading> <slot name="subheading"></slot> </template>
             <template #aside> <slot name="aside"></slot> </template>
         </CardHeader>
-        <CardContent><slot name="content"></slot></CardContent>
+        <CardContent>
+            <template v-if="$slots.content" #content>
+                <slot name="content"></slot>
+            </template>
+        </CardContent>
     </div>
 </template>

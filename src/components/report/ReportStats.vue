@@ -41,6 +41,6 @@ const icons = {
 
 <style scoped>
 .cc__report-stats {
-    @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-12;
+    @apply grid sm:grid-cols-2 lg:grid-cols-3 gap-4 mb-4;
 }
 </style>

@@ -49,6 +49,12 @@
     .cc__card {
         @apply bg-white dark:bg-slate-800 shadow rounded-lg mb-6 md:mb-10 overflow-hidden;
     }
+    .cc__card.margin-sm {
+        @apply mb-4;
+    }
+    .cc__card.margin-0 {
+        @apply mb-0;
+    }
     .cc__card-heading {
         @apply flex items-center justify-between p-3 md:px-5 md:py-4 border-b border-ao-mid-blue-200 dark:border-slate-700;
     }
@@ -71,15 +77,7 @@
     .cc__card-content {
         @apply text-xs md:text-sm text-ao-mid-blue-600 dark:text-slate-400 p-3 md:p-5;
     }
-    .cc__heading-line {
-        @apply relative w-full mb-4;
-    }
-    .cc__heading-line .cc__h3 {
-        @apply inline bg-ao-mid-blue-200 dark:bg-slate-900  pr-3 md:pr-4;
-    }
-    .cc__heading-line:after {
-        @apply h-[1px] absolute top-1/2 right-0 w-full bg-ao-mid-blue-300 dark:bg-slate-700 content-[''] -z-10;
-    }
+
     
     
 }
