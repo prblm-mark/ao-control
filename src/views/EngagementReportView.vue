@@ -11,6 +11,7 @@ import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
 import InterestsStats from '../components/report/InterestsStats.vue'
 import ReportTable from '../components/report/ReportTable.vue'
 import reportTopUsers from '@/data/reportTopUsers.json'
+import LineChart from '../components/charts/LineChart.vue'
 </script>
 
 <template>
@@ -49,7 +50,7 @@ import reportTopUsers from '@/data/reportTopUsers.json'
         <HeadingBreak margin-top>Display Views</HeadingBreak>
         <ReportStats :stats="reportViewsStats" />
         <CardElement no-header margin-sm>
-            <template #content> Chart goes here </template>
+            <template #content> <LineChart /> </template>
         </CardElement>
         <SecondaryButton>
             Comment
