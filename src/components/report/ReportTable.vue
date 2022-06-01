@@ -28,16 +28,19 @@ const toggleVisibility = (e) => {
         :key="index"
     >
         <div class="cc__table-main">
-            <div class="cc__table-user">
+            <div v-if="data.main.name === 'User'" class="cc__table-user">
                 <a href="#">
                     <img
-                        :src="data.avatar"
-                        :alt="data.user"
+                        :src="data.main.value.avatar"
+                        :alt="data.main.value.user"
                         class="cc__table-avatar"
                     />
 
-                    {{ data.user }}
+                    {{ data.main.value.user }}
                 </a>
+            </div>
+            <div v-else>
+                <a href="#">{{ data.main.value }}</a>
             </div>
 
             <span
@@ -51,11 +54,24 @@ const toggleVisibility = (e) => {
         <div class="hidden lg:grid items-center">
             <div class="cc__table-grid">
                 <div v-for="stat in data.stats" :key="stat.name">
-                    <h6 class="cc__table-subheading">
-                        {{ stat.name }}
-                    </h6>
+                    <div v-if="stat.name === 'User'" class="cc__table-user">
+                        <a href="#">
+                            <img
+                                :src="stat.value.avatar"
+                                :alt="stat.value.user"
+                                class="cc__table-avatar"
+                            />
 
-                    <b>{{ stat.value }}</b>
+                            {{ stat.value.user }}
+                        </a>
+                    </div>
+                    <div v-else>
+                        <h6 class="cc__table-subheading">
+                            {{ stat.name }}
+                        </h6>
+
+                        <b>{{ stat.value }}</b>
+                    </div>
                 </div>
             </div>
         </div>
@@ -74,7 +90,7 @@ const toggleVisibility = (e) => {
     @apply text-sm grid lg:grid-cols-[300px_minmax(100px,_1fr)] xl:grid-cols-[400px_minmax(100px,_1fr)] lg:grid-flow-col auto-cols-fr border-t border-ao-mid-blue-200 dark:border-slate-700;
 }
 .cc__table-main {
-    @apply flex items-center justify-between col-span-1 p-3;
+    @apply flex items-center justify-between col-span-1 p-3 min-h-[4rem];
 }
 .cc__table-main a {
     @apply font-semibold inline-block pr-3 md:pr-4 lg:pr-0 hover:text-ao-mid-blue-500 dark:text-slate-300 dark:hover:text-slate-400 transition-colors leading-tight line-clamp-2;
@@ -90,10 +106,13 @@ const toggleVisibility = (e) => {
     @apply lg:hidden cursor-pointer text-ao-mid-blue-400 hover:text-ao-mid-blue-600 dark:text-slate-400 dark:hover:text-slate-500 transition-colors;
 }
 .cc__table-grid {
-    @apply grid grid-cols-2 sm:grid-cols-4 lg:grid-flow-col lg:auto-cols-fr;
+    @apply grid grid-cols-2 sm:grid-flow-col sm:auto-cols-fr;
 }
 .cc__table-grid > div {
-    @apply p-3 border-ao-mid-blue-200 dark:border-slate-700 even:border-l border-t sm:odd:border-l sm:first:!border-l-0 lg:!border-0;
+    @apply flex items-center min-h-[4rem] p-3 border-ao-mid-blue-200 dark:border-slate-700 even:border-l border-t sm:odd:border-l sm:first:!border-l-0 lg:!border-0;
+}
+.cc__table-grid > div a {
+    @apply font-semibold hover:text-ao-mid-blue-500 dark:text-slate-300 dark:hover:text-slate-400 transition-colors;
 }
 .cc__table-subheading {
     @apply text-ao-mid-blue-500 dark:text-slate-400 text-xs lg:hidden;

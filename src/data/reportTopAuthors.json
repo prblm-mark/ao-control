@@ -1,0 +1,197 @@
+{
+    "labels": ["Article", "User", "Total Views"],
+    "data": [
+        {
+            "main": {
+                "name":"Author",
+                "value": "Soccer Coach Weekly LEGACY Monthly Sub"
+            },
+            "stats": [
+                {
+                    "name": "User",
+                    "value": {
+                        "avatar": "https://source.unsplash.com/ZHvM3XIOHoE",
+                        "user": "Siv Ananthakumar"
+                    }
+                },
+                {
+                    "name": "Total views",
+                    "value": 189
+                }
+            ]
+        },
+        {
+            "main": {
+                "name":"Author",
+                "value": "Can theory of change inform your data strategy?"
+            },
+            "stats": [
+                {
+                    "name": "User",
+                    "value": {
+                        "avatar": "https://source.unsplash.com/jzz_3jWMzHA",
+                        "user": "Karolyne Ugnis"
+                    }
+                },
+                {
+                    "name": "Total views",
+                    "value": 177
+                }
+            ]
+        },
+        {
+            "main": {
+                "name":"Author",
+                "value": "NFTs for good: how charities can fundraise with NFTs"
+            },
+            "stats": [
+                {
+                    "name": "User",
+                    "value": {
+                        "avatar": "https://source.unsplash.com/MTZTGvDsHFY",
+                        "user": "Francis Mullins"
+                    }
+                },
+                {
+                    "name": "Total views",
+                    "value": 162
+                }
+            ]
+        },
+        {
+            "main": {
+                "name":"Author",
+                "value": "How to optimise content for mobile devices"
+            },
+            "stats": [
+                {
+                    "name": "User",
+                    "value": {
+                        "avatar": "https://source.unsplash.com/IF9TK5Uy-KI",
+                        "user": "Ashley Schneider"
+                    }
+                },
+                {
+                    "name": "Total views",
+                    "value": 158
+                }
+            ]
+        },
+        {
+            "main": {
+                "name":"Author",
+                "value": "Re-defining the way charities work"
+            },
+            "stats": [
+                {
+                    "name": "User",
+                    "value": {
+                        "avatar": "https://source.unsplash.com/iEEBWgY_6lA",
+                        "user": "Seth Farmer"
+                    }
+                },
+                {
+                    "name": "Total views",
+                    "value": 143
+                }
+            ]
+        },
+        {
+            "main": {
+                "name":"Author",
+                "value": "How did you get there...with Danny Attias"
+            },
+            "stats": [
+                {
+                    "name": "User",
+                    "value": {
+                        "avatar": "https://source.unsplash.com/TACdQo62To0",
+                        "user": "Mona Fernandez"
+                    }
+                },
+                {
+                    "name": "Total views",
+                    "value": 137
+                }
+            ]
+        },
+        {
+            "main": {
+                "name":"Author",
+                "value": "The latest trends in service delivery"
+            },
+            "stats": [
+                {
+                    "name": "User",
+                    "value": {
+                        "avatar": "https://source.unsplash.com/MZf0mI14RI0",
+                        "user": "Julius Metyko"
+                    }
+                },
+                {
+                    "name": "Total views",
+                    "value": 117
+                }
+            ]
+        },
+        {
+            "main": {
+                "name":"Author",
+                "value": "The More Important the Work, the More Important the Rest"
+            },
+            "stats": [
+                {
+                    "name": "User",
+                    "value": {
+                        "avatar": "https://source.unsplash.com/2EdIX-O2lkI",
+                        "user": "Susan Kerrigan"
+                    }
+                },
+                {
+                    "name": "Total views",
+                    "value": 104
+                }
+            ]
+        },
+        {
+            "main": {
+                "name":"Author",
+                "value": "How to design a product that can grow itself 10x in year"
+            },
+            "stats": [
+                {
+                    "name": "User",
+                    "value": {
+                        "avatar": "https://source.unsplash.com/0J9l9xRyMSo",
+                        "user": "James Harley"
+                    }
+                },
+                {
+                    "name": "Total views",
+                    "value": 91
+                }
+            ]
+        },
+        {
+            "main": {
+                "name":"Author",
+                "value": "Webinar: How to put storytelling at the heart of fundraising"
+            },
+            "stats": [
+                {
+                    "name": "User",
+                    "value": {
+                        "avatar": "https://source.unsplash.com/6qf1uljGpU4",
+                        "user": "Marilyn Morales"
+                    }
+                },
+                {
+                    "name": "Total views",
+                    "value": 89
+                }
+            ]
+        }
+       
+       
+    ]
+}

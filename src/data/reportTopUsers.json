@@ -1,9 +1,14 @@
 {
-    "labels": ["Users", "Logins", "Page views", "Downloads", "Points"],
+    "labels": ["User", "Logins", "Page views", "Downloads", "Points"],
     "data": [
         {
-            "avatar": "https://source.unsplash.com/ZHvM3XIOHoE",
-            "user": "Siv Ananthakumar",
+            "main": {
+                "name": "User",
+                "value": {
+                    "avatar": "https://source.unsplash.com/ZHvM3XIOHoE",
+                    "user": "Siv Ananthakumar"
+                }
+            },
             "stats": [
                 {
                     "name": "Logins",
@@ -24,8 +29,14 @@
             ]
         },
         {
-            "avatar": "https://source.unsplash.com/jzz_3jWMzHA",
-            "user": "Karolyne Ugnis",
+            
+            "main": {
+                "name": "User",
+                "value": {
+                    "avatar": "https://source.unsplash.com/jzz_3jWMzHA",
+                    "user": "Karolyne Ugnis"
+                }
+            },
             "stats": [
                 {
                     "name": "Logins",
@@ -46,8 +57,14 @@
             ]
         },
         {
-            "avatar": "https://source.unsplash.com/MTZTGvDsHFY",
-            "user": "Francis Mullins",
+            
+            "main": {
+                "name": "User",
+                "value": {
+                    "avatar": "https://source.unsplash.com/MTZTGvDsHFY",
+                    "user": "Francis Mullins"
+                }
+            },
             "stats": [
                 {
                     "name": "Logins",
@@ -68,8 +85,14 @@
             ]
         },
         {
-            "avatar": "https://source.unsplash.com/IF9TK5Uy-KI",
-            "user": "Ashley Schneider",
+            
+            "main": {
+                "name": "User",
+                "value": {
+                    "avatar": "https://source.unsplash.com/IF9TK5Uy-KI",
+                    "user": "Ashley Schneider"
+                }
+            },
             "stats": [
                 {
                     "name": "Logins",
@@ -90,8 +113,14 @@
             ]
         },
         {
-            "avatar": "https://source.unsplash.com/iEEBWgY_6lA",
-            "user": "Seth Farmer",
+            
+            "main": {
+                "name": "User",
+                "value": {
+                    "avatar": "https://source.unsplash.com/iEEBWgY_6lA",
+                    "user": "Seth Farmer"
+                }
+            },
             "stats": [
                 {
                     "name": "Logins",
@@ -112,8 +141,14 @@
             ]
         },
         {
-            "avatar": "https://source.unsplash.com/TACdQo62To0",
-            "user": "Mona Fernandez",
+            
+            "main": {
+                "name": "User",
+                "value": {
+                    "avatar": "https://source.unsplash.com/TACdQo62To0",
+                    "user": "Mona Fernandez"
+                }
+            },
             "stats": [
                 {
                     "name": "Logins",
@@ -134,8 +169,14 @@
             ]
         },
         {
-            "avatar": "https://source.unsplash.com/MZf0mI14RI0",
-            "user": "Julius Metyko",
+            
+            "main": {
+                "name": "User",
+                "value": {
+                    "avatar": "https://source.unsplash.com/MZf0mI14RI0",
+                    "user": "Julius Metyko"
+                }
+            },
             "stats": [
                 {
                     "name": "Logins",
@@ -156,8 +197,14 @@
             ]
         },
         {
-            "avatar": "https://source.unsplash.com/2EdIX-O2lkI",
-            "user": "Susan Kerrigan",
+            
+            "main": {
+                "name": "User",
+                "value": {
+                    "avatar": "https://source.unsplash.com/2EdIX-O2lkI",
+                    "user": "Susan Kerrigan"
+                }
+            },
             "stats": [
                 {
                     "name": "Logins",
@@ -178,8 +225,14 @@
             ]
         },
         {
-            "avatar": "https://source.unsplash.com/0J9l9xRyMSo",
-            "user": "James Harley",
+            
+            "main": {
+                "name": "User",
+                "value": {
+                    "avatar": "https://source.unsplash.com/0J9l9xRyMSo",
+                    "user": "James Harley"
+                }
+            },
             "stats": [
                 {
                     "name": "Logins",
@@ -200,8 +253,14 @@
             ]
         },
         {
-            "avatar": "https://source.unsplash.com/6qf1uljGpU4",
-            "user": "Marilyn Morales",
+            
+            "main": {
+                "name": "User",
+                "value": {
+                    "avatar": "https://source.unsplash.com/6qf1uljGpU4",
+                    "user": "Marilyn Morales"
+                }
+            },
             "stats": [
                 {
                     "name": "Logins",

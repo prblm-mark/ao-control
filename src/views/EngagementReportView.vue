@@ -9,9 +9,13 @@ import reportViewsStats from '@/data/reportViewsStats.json'
 import IconAnnotation from '@/components/icons/IconAnnotation.vue'
 import SecondaryButton from '@/components/buttons/SecondaryButton.vue'
 import InterestsStats from '../components/report/InterestsStats.vue'
-import ReportTable from '../components/report/ReportTable.vue'
 import reportTopUsers from '@/data/reportTopUsers.json'
+import reportTopAuthors from '@/data/reportTopAuthors.json'
 import LineChart from '../components/charts/LineChart.vue'
+import ReportTable from '../components/report/ReportTable.vue'
+import reportChartDataViews from '../data/reportChartDataViews'
+import reportChartDataAccess from '../data/reportChartDataAccess'
+import reportChartDataPoints from '../data/reportChartDataPoints'
 </script>
 
 <template>
@@ -47,10 +51,52 @@ import LineChart from '../components/charts/LineChart.vue'
             <template #icon> <IconAnnotation /> </template>
         </SecondaryButton>
 
+        <HeadingBreak margin-top>Top 10 Authored Articles</HeadingBreak>
+        <CardElement no-header margin-sm>
+            <ReportTable :table-data="reportTopAuthors" />
+        </CardElement>
+        <SecondaryButton>
+            Comment
+            <template #icon> <IconAnnotation /> </template>
+        </SecondaryButton>
+
+        <HeadingBreak margin-top>Recent Logins</HeadingBreak>
+        <CardElement no-header margin-sm>
+            <ReportTable :table-data="reportTopUsers" />
+        </CardElement>
+        <SecondaryButton>
+            Comment
+            <template #icon> <IconAnnotation /> </template>
+        </SecondaryButton>
+
         <HeadingBreak margin-top>Display Views</HeadingBreak>
         <ReportStats :stats="reportViewsStats" />
         <CardElement no-header margin-sm>
-            <template #content> <LineChart /> </template>
+            <template #content>
+                <LineChart :chart-data="reportChartDataViews" />
+            </template>
+        </CardElement>
+        <SecondaryButton>
+            Comment
+            <template #icon> <IconAnnotation /> </template>
+        </SecondaryButton>
+
+        <HeadingBreak margin-top>Areas Accessed</HeadingBreak>
+        <CardElement no-header margin-sm>
+            <template #content>
+                <LineChart :chart-data="reportChartDataAccess" />
+            </template>
+        </CardElement>
+        <SecondaryButton>
+            Comment
+            <template #icon> <IconAnnotation /> </template>
+        </SecondaryButton>
+
+        <HeadingBreak margin-top>Engagement Points</HeadingBreak>
+        <CardElement no-header margin-sm>
+            <template #content>
+                <LineChart :chart-data="reportChartDataPoints" />
+            </template>
         </CardElement>
         <SecondaryButton>
             Comment

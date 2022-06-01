@@ -72,46 +72,7 @@ export default {
             default: () => {},
         },
     },
-    data() {
-        return {
-            chartData: {
-                labels: [
-                    'January',
-                    'February',
-                    'March',
-                    'April',
-                    'May',
-                    'June',
-                ],
-                datasets: [
-                    {
-                        label: 'Data One',
-                        backgroundColor: 'rgba(0,175,190,.2)',
-                        data: [50, 39, 10, 40, 70, 44],
-                        tension: 0.3,
-                        borderColor: '#00AFBE',
-                        pointBackgroundColor: '#fff',
-                        pointBorderWidth: 2,
-                        pointHoverBackgroundColor: '#00AFBE',
-                        fill: true,
-                        pointRadius: 3,
-                    },
-                    {
-                        label: 'Data Two',
-                        data: [30, 29, 28, 60, 19, 60],
-                        tension: 0.3,
-                        backgroundColor: 'rgba(0,157,146,.2)',
-                        borderColor: '#009D92',
-                        pointBackgroundColor: '#fff',
-                        pointBorderWidth: 2,
-                        pointHoverBackgroundColor: '#009D92',
-                        fill: true,
-                        pointRadius: 3,
-                    },
-                ],
-            },
-        }
-    },
+
     computed: {
         chartOptions() {
             return {
