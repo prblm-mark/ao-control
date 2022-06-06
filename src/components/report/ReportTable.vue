@@ -96,7 +96,7 @@ const toggleVisibility = (e) => {
     @apply font-semibold inline-block pr-3 md:pr-4 lg:pr-0 hover:text-ao-mid-blue-500 dark:text-slate-300 dark:hover:text-slate-400 transition-colors leading-tight line-clamp-2;
 }
 .cc__table-avatar {
-    @apply w-10 h-10 object-cover rounded-full;
+    @apply w-10 h-10 min-w-[2.5rem] object-cover rounded-full;
 }
 .cc__table-user,
 .cc__table-user a {
